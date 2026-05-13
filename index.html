@@ -213,7 +213,7 @@
                 <!-- Metrics Row -->
                 <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mt-12">
                     <div class="metric-card rounded-xl p-4">
-                        <div class="text-2xl font-bold text-cyan-400">5</div>
+                        <div class="text-2xl font-bold text-cyan-400">6</div>
                         <div class="text-sm text-gray-400">Projects Built</div>
                     </div>
                     <div class="metric-card rounded-xl p-4">
@@ -266,7 +266,7 @@
                             </div>
                             <div class="mb-4">
                                 <div class="text-cyan-400">✓ Agentic AI: Autonomous systems, RAG, LLM Orchestration</div>
-                                <div class="text-cyan-400">✓ AI Stack: Groq API, Gemini API, ChromaDB, SentenceTransformer</div>
+                                <div class="text-cyan-400">✓ AI Stack: Groq API, Gemini API, ChromaDB, LangChain, LangGraph, MCP</div>
                                 <div class="text-cyan-400">✓ APIs & UI: FastAPI, Streamlit, DuckDuckGo, Tavily</div>
                                 <div class="text-cyan-400">✓ CLI Tools: Rich, Python, JSON storage</div>
                                 <div class="text-cyan-400">✓ Backend: ASP.NET (C#), SQL Server, HTML/CSS/JS</div>
@@ -275,7 +275,7 @@
                                 <span class="text-blue-400">$</span> harsh.currently_learning()
                             </div>
                             <div class="text-yellow-400 mb-4">
-                                > ["LangGraph", "n8n", "Ollama (local models)"]
+                                > ["FastAPI", "Docker", "Ollama (local models)"]
                             </div>
                             <div class="mb-2">
                                 <span class="text-blue-400">$</span> harsh.get_availability()
@@ -559,7 +559,7 @@
                     </div>
 
                     <!-- NextSteps - full width -->
-                    <div class="project-card p-8 rounded-2xl md:col-span-2">
+                    <div class="project-card p-8 rounded-2xl">
                         <div class="flex items-center justify-between mb-4">
                             <div class="flex items-center space-x-3">
                                 <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-lg flex items-center justify-center">
@@ -578,7 +578,7 @@
                         <p class="text-gray-400 mb-6 leading-relaxed">
                             AI career planning app that analyzes a resume against a job description or URL — delivers full gap analysis, skill mapping, and personalized roadmap in under 5–8 minutes. Clean separation between parsing, analysis, and output generation with no hardcoded assumptions about resume or job format.
                         </p>
-                        <div class="grid md:grid-cols-3 gap-4 mb-6">
+                        <div class="space-y-3 mb-6">
                             <div class="flex items-center space-x-2 text-sm">
                                 <i class="fas fa-check text-green-400"></i>
                                 <span>Resume vs JD gap analysis with skill mapping</span>
@@ -609,6 +609,59 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- DevMind -->
+                    <div class="project-card p-8 rounded-2xl">
+                        <div class="flex items-center justify-between mb-4">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center">
+                                    <i class="fas fa-plug text-white"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-xl font-bold text-cyan-300">DevMind — MCP Server</h3>
+                                    <div class="text-sm text-gray-500">MCP Tool Server · Shipped</div>
+                                </div>
+                            </div>
+                            <div class="flex space-x-2">
+                                <span class="px-2 py-1 text-xs bg-violet-500/20 text-violet-300 rounded">MCP</span>
+                                <span class="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">HITL</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 mb-6 leading-relaxed">
+                            A local MCP server exposing 6 developer tools — file ops, Python execution, and JSON utilities — with human-in-the-loop confirmation built into any action that writes or runs code.
+                        </p>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-check text-green-400"></i>
+                                <span>6 tools: read_file, write_file, list_directory, run_python_snippet, format_json, count_tokens</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-check text-green-400"></i>
+                                <span>HITL guardrails on write and run — no side effects without explicit confirmation</span>
+                            </div>
+                            <div class="flex items-center space-x-2 text-sm">
+                                <i class="fas fa-check text-green-400"></i>
+                                <span>Solved subprocess stdin isolation bug that silently breaks naive MCP implementations</span>
+                            </div>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <div class="flex flex-wrap gap-2 text-xs">
+                                <span class="text-gray-500">Python</span>
+                                <span class="text-gray-500">•</span>
+                                <span class="text-gray-500">MCP SDK</span>
+                                <span class="text-gray-500">•</span>
+                                <span class="text-gray-500">tiktoken</span>
+                                <span class="text-gray-500">•</span>
+                                <span class="text-gray-500">uv</span>
+                            </div>
+                            <div class="flex space-x-3">
+                                <a href="https://github.com/harshbhanushali26/mcp-implementations" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
+                                    <i class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
 
                 </div>
                     
@@ -718,6 +771,21 @@
                             <i class="fas fa-bolt text-2xl text-cyan-400 mb-2"></i>
                             <div class="font-semibold">FastAPI</div>
                             <div class="text-xs text-gray-400">Backend APIs</div>
+                        </div>
+                        <div class="skill-badge rounded-xl p-4 text-center">
+                            <i class="fas fa-link text-2xl text-cyan-400 mb-2"></i>
+                            <div class="font-semibold">LangChain</div>
+                            <div class="text-xs text-gray-400">LLM Chains</div>
+                        </div>
+                        <div class="skill-badge rounded-xl p-4 text-center">
+                            <i class="fas fa-project-diagram text-2xl text-cyan-400 mb-2"></i>
+                            <div class="font-semibold">LangGraph</div>
+                            <div class="text-xs text-gray-400">Agent Graphs</div>
+                        </div>
+                        <div class="skill-badge rounded-xl p-4 text-center">
+                            <i class="fas fa-plug text-2xl text-cyan-400 mb-2"></i>
+                            <div class="font-semibold">MCP</div>
+                            <div class="text-xs text-gray-400">Tool Servers</div>
                         </div>
                         <div class="skill-badge rounded-xl p-4 text-center">
                             <i class="fab fa-github text-2xl text-cyan-400 mb-2"></i>
