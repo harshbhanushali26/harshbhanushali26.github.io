@@ -1,1178 +1,1017 @@
 <!DOCTYPE html>
-<html lang="en" class="scroll-smooth">
-
+<html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="favicon.svg">
-    <!-- SEO -->
-    <meta name="description" content="Harsh Bhanushali — AI Engineer building agentic AI systems, RAG pipelines, and multi-agent workflows in Python. FinOS, hArI v2, MCP, FastAPI.">
-    <meta property="og:title" content="Harsh Bhanushali | AI Engineer">
-    <meta property="og:description" content="AI Engineer building multi-agent workflows, custom RAG pipelines, and cost-aware LLM systems from scratch in Python.">
-    <meta property="og:image" content="assets/images/preview.png">
-    <meta property="og:type" content="website">
-    <title>Harsh Bhanushali | AI Engineer</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&family=Inter:wght@300;400;500;600;700&display=swap');
-        
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        
-        .mono {
-            font-family: 'JetBrains Mono', monospace;
-        }
-        
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            top: 0;
-            left: 0;
-            z-index: 1;
-            pointer-events: none;
-        }
-        
-        .content-layer {
-            position: relative;
-            z-index: 10;
-        }
-        
-        .glass {
-            background: rgba(8, 27, 31, 0.8);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(34, 211, 238, 0.1);
-        }
-        
-        .glow-effect {
-            box-shadow: 0 0 20px rgba(34, 211, 238, 0.3);
-        }
-        
-        .terminal-window {
-            background: #1a1a1a;
-            border-radius: 8px;
-            overflow: hidden;
-            border: 1px solid #333;
-        }
-        
-        .terminal-header {
-            background: #2d2d2d;
-            padding: 10px 15px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        
-        .terminal-dot {
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-        }
-        
-        .terminal-body {
-            padding: 20px;
-            color: #00ff00;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 14px;
-            line-height: 1.6;
-        }
-        
-        .metric-card {
-            background: linear-gradient(135deg, rgba(34, 211, 238, 0.1), rgba(6, 182, 212, 0.05));
-            border: 1px solid rgba(34, 211, 238, 0.2);
-            transition: all 0.3s ease;
-        }
-        
-        .metric-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(34, 211, 238, 0.2);
-        }
-        
-        .project-card {
-            background: linear-gradient(135deg, #111111, #1a1a1a);
-            border: 1px solid rgba(34, 211, 238, 0.1);
-            transition: all 0.3s ease;
-            position: relative;
-            overflow: hidden;
-        }
-        
-        .project-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 100%;
-            height: 2px;
-            background: linear-gradient(90deg, transparent, #22d3ee, transparent);
-            transition: left 0.5s ease;
-        }
-        
-        .project-card:hover::before {
-            left: 100%;
-        }
-        
-        .project-card:hover {
-            transform: translateY(-8px);
-            border-color: rgba(34, 211, 238, 0.3);
-            box-shadow: 0 15px 35px rgba(34, 211, 238, 0.1);
-        }
-        
-        .skill-badge {
-            background: rgba(34, 211, 238, 0.1);
-            border: 1px solid rgba(34, 211, 238, 0.3);
-            transition: all 0.3s ease;
-        }
-        
-        .skill-badge:hover {
-            background: rgba(34, 211, 238, 0.2);
-            transform: scale(1.05);
-        }
-        
-        .pulse-border {
-            animation: pulse-border 2s infinite;
-        }
-        
-        @keyframes pulse-border {
-            0%, 100% { border-color: rgba(34, 211, 238, 0.3); }
-            50% { border-color: rgba(34, 211, 238, 0.8); }
-        }
-        
-        .floating {
-            animation: floating 3s ease-in-out infinite;
-        }
-        
-        @keyframes floating {
-            0%, 100% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
-        }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #22d3ee, #06b6d4, #0891b2);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsh Bhanushali, AI Engineer</title>
+<meta name="description" content="Harsh Bhanushali ,  AI Systems & Autonomous Agents Engineer. Builds stateful agent workflows, RAG systems, tool execution pipelines, and cost-aware LLM systems in Python.">
+<meta name="author" content="Harsh Bhanushali">
+<meta property="og:title" content="Harsh Bhanushali, AI Engineer">
+<meta property="og:description" content="AI Systems & Autonomous Agents Engineer building stateful agent workflows, RAG systems, tool execution pipelines, and cost-aware LLM systems in Python.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://harshbhanushali26.github.io/assets/images/preview.png">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='16' fill='%230a0e14' stroke='%234493ff' stroke-width='2'/><text x='50' y='70' text-anchor='middle' font-family='monospace' font-size='40' font-weight='bold' fill='%234493ff'>HB</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo:wght@400;700&family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0a0e14; --bg-2:#0d1117;
+  --paper:#0d1117;
+  --glass-bg:rgba(13,17,23,0.32);
+  --glass-border:rgba(88,147,255,0.14);
+  --glass-blur:blur(14px) saturate(160%);
+  --glass-hover-border:rgba(88,147,255,0.28);
+  --glass-shadow:0 4px 30px rgba(0,0,0,0.2);
+  --glass-hover-shadow:0 8px 40px rgba(0,224,255,0.1),0 0 0 1px rgba(0,224,255,0.08);
+  --ink:#d4dde4; --ink-bright:#f0f6fc; --ink-soft:#8b949e; --ink-faint:#484f58;
+  --blue:#4493ff; --blue-soft:#388bfd; --cyan:#00e0ff; --emerald:#3ddb8a;
+  --stamp:#ff6b61; --amber:#fbbf24; --violet:#9d6cf7;
+  --rule:rgba(139,148,158,0.16); --rule-bright:rgba(139,148,158,0.3);
+  --grid:rgba(68,147,255,0.07);
+  --glow-blue:0 0 24px rgba(68,147,255,0.2);
+  --glow-cyan:0 0 24px rgba(0,224,255,0.12);
+  --nav-bg:rgba(10,14,20,0.85); --nav-bg-scrolled:rgba(10,14,20,0.95);
+  --nav-shadow:0 4px 30px rgba(0,0,0,0.3);
+  --hover-tint:rgba(0,224,255,0.04);
+  --max:1180px;
+  --sans:'IBM Plex Sans',sans-serif;
+}
+:root.light{
+  --bg:#EFEBE1; --bg-2:#E8E2D4; --paper:#f5f1e8;
+  --glass-bg:rgba(255,255,255,0.3);
+  --glass-border:rgba(30,77,107,0.14);
+  --glass-blur:blur(14px) saturate(130%);
+  --glass-hover-border:rgba(30,77,107,0.28);
+  --glass-shadow:0 4px 20px rgba(0,0,0,0.04);
+  --glass-hover-shadow:0 8px 30px rgba(30,77,107,0.08),0 0 0 1px rgba(30,77,107,0.06);
+  --ink:#1C1B18; --ink-bright:#000000; --ink-soft:#4a4640; --ink-faint:#8a8580;
+  --blue:#1E4D6B; --blue-soft:#3d6f8e; --cyan:#0a6e7a; --emerald:#2d7a4e;
+  --stamp:#A63D2F; --amber:#b8860b; --violet:#6b3da3;
+  --rule:rgba(28,27,24,0.16); --rule-bright:rgba(28,27,24,0.3);
+  --grid:rgba(30,77,107,0.07);
+  --nav-bg:rgba(239,235,225,0.88); --nav-bg-scrolled:rgba(239,235,225,0.95);
+  --nav-shadow:0 4px 20px rgba(0,0,0,0.08);
+  --hover-tint:rgba(30,77,107,0.04);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:60px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto} *{animation-duration:.001ms!important;transition-duration:.001ms!important}}
+body{
+  background:linear-gradient(var(--grid) 1px,transparent 1px) 0 0/44px 44px,linear-gradient(90deg,var(--grid) 1px,transparent 1px) 0 0/44px 44px,var(--bg);
+  color:var(--ink); font-family:'IBM Plex Mono',monospace; font-size:15px; line-height:1.6; overflow-x:hidden;
+}
+body::before{
+  content:'';position:fixed;inset:0;z-index:0;pointer-events:none;
+  background:radial-gradient(ellipse 700px 500px at 15% 10%,rgba(88,166,255,0.05),transparent),radial-gradient(ellipse 600px 400px at 85% 60%,rgba(139,92,246,0.04),transparent),radial-gradient(ellipse 500px 300px at 50% 95%,rgba(52,211,153,0.03),transparent);
+}
+.slab{font-family:'Arvo',serif}
+a{color:inherit}
+::selection{background:rgba(88,166,255,0.2);color:var(--ink-bright)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--blue-soft);border-radius:3px}
+a:focus-visible,button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px;border-radius:4px}
+.skip-link{position:absolute;top:-100px;left:0;background:var(--cyan);color:var(--bg);padding:12px 24px;font-weight:600;z-index:1000;transition:top .2s;font-family:var(--sans)}
+.skip-link:focus{top:0}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 28px;position:relative;z-index:1}
+
+/* TITLE BAR */
+.titlebar{position:sticky;top:0;z-index:50;background:var(--nav-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-bottom:1px solid var(--glass-border);transition:background .3s,border-color .3s}
+.titlebar.scrolled{background:var(--nav-bg-scrolled);box-shadow:var(--nav-shadow);border-bottom-color:var(--glass-hover-border)}
+.titlebar .wrap{display:flex;align-items:center;justify-content:space-between;height:56px}
+.tb-mark{display:flex;align-items:center;gap:10px;font-size:13px;letter-spacing:0.5px;text-decoration:none;color:var(--ink)}
+.tb-mark .box{width:26px;height:26px;border:1.5px solid var(--blue);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:600;color:var(--blue);transition:all .3s}
+.tb-mark:hover .box{background:var(--blue);color:var(--bg);box-shadow:var(--glow-blue)}
+.tb-nav{display:flex;gap:0}
+.tb-nav a{font-size:12.5px;text-decoration:none;color:var(--ink-soft);padding:8px 16px;border-left:1px solid var(--rule);letter-spacing:0.3px;transition:color .2s,background .2s;position:relative}
+.tb-nav a:hover{color:var(--cyan);background:var(--hover-tint)}
+.tb-nav a:last-of-type{border-right:1px solid var(--rule)}
+.tb-nav a.active{color:var(--cyan)}
+.tb-nav a.active::after{content:'';position:absolute;bottom:-1px;left:16px;right:16px;height:2px;background:var(--cyan);border-radius:1px}
+.tb-right{display:flex;align-items:center;gap:10px}
+.tb-icon-link{width:32px;height:32px;display:flex;align-items:center;justify-content:center;color:var(--ink-soft);transition:color .2s,background .2s;border-radius:6px;font-size:14px}
+.tb-icon-link:hover{color:var(--cyan);background:var(--hover-tint)}
+.tb-toggle{display:none;background:none;border:1.5px solid var(--ink-soft);color:var(--ink);width:36px;height:36px;font-family:inherit;font-size:16px;cursor:pointer;border-radius:4px}
+.theme-toggle{background:none;border:1px solid var(--rule-bright);width:32px;height:32px;cursor:pointer;border-radius:50%;position:relative;transition:all .3s;flex-shrink:0}
+.theme-toggle::before{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:14px;height:14px;border-radius:50%;background:var(--amber);box-shadow:0 0 8px var(--amber);transition:all .3s}
+:root.light .theme-toggle::before{background:transparent;box-shadow:none;border:2px solid var(--ink-soft);width:12px;height:12px;border-radius:50%}
+:root.light .theme-toggle::after{content:'';position:absolute;top:3px;right:5px;width:8px;height:8px;border-radius:50%;background:var(--bg)}
+
+/* SECTIONS */
+section{padding:96px 0;border-bottom:1px solid var(--rule);position:relative}
+section:last-of-type{border-bottom:none}
+.sheet-label{display:flex;align-items:baseline;gap:14px;margin-bottom:44px}
+.sheet-label .no{font-size:12px;color:var(--blue);letter-spacing:1px;white-space:nowrap;position:relative}
+.sheet-label .no::after{content:'';position:absolute;bottom:-4px;left:0;width:100%;height:2px;background:var(--blue);transform:scaleX(0);transform-origin:left;transition:transform .6s ease}
+section.visible .sheet-label .no::after{transform:scaleX(1)}
+.sheet-label .rule{flex:1;height:1px;background:var(--rule)}
+.sheet-label h2{font-size:1.9rem;font-weight:700;color:var(--ink-bright)}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .7s cubic-bezier(0.16,1,0.3,1),transform .7s cubic-bezier(0.16,1,0.3,1)}
+.reveal.visible{opacity:1;transform:translateY(0)}
+
+/* HERO */
+.hero{padding:64px 0 88px;border-bottom:1px solid var(--rule-bright)}
+.hero-title{font-size:clamp(2.6rem,7vw,5rem);line-height:1.02;font-weight:700;letter-spacing:-1px;margin-bottom:16px;color:var(--ink-bright)}
+.hero-title .accent{color:var(--blue);animation:hueShift 8s ease-in-out infinite}
+@keyframes hueShift{0%,100%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(25deg)}}
+.hero-role{font-family:var(--sans);font-size:1.05rem;color:var(--cyan);margin-bottom:36px;max-width:580px;line-height:1.7}
+.hero-terminal{font-family:'IBM Plex Mono',monospace;font-size:13px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:10px;padding:18px 22px;margin-bottom:36px;max-width:580px;box-shadow:var(--glass-shadow);overflow:hidden}
+.hero-terminal .term-line{display:flex;align-items:center;gap:8px;min-height:20px}
+.hero-terminal .prompt{color:var(--blue);flex-shrink:0}
+.hero-terminal .typed{color:var(--ink)}
+.hero-terminal .cursor{display:inline-block;width:8px;height:15px;background:var(--cyan);margin-left:2px;animation:blink 1s step-end infinite;flex-shrink:0}
+.hero-terminal .cursor.done{animation:blink 1.2s step-end infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+.hero-terminal .term-line.hidden{display:none}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border-top:1px solid var(--rule-bright);margin-top:8px}
+.hero-cell{padding:16px 20px 16px 0;border-bottom:1px solid var(--rule);transition:background .3s}
+.hero-cell:nth-child(odd){border-right:1px solid var(--rule);padding-left:0}
+.hero-cell:hover{background:rgba(68,147,255,0.04)}
+.hero-cell .k{font-size:10.5px;color:var(--ink-soft);letter-spacing:1px;margin-bottom:4px}
+.hero-cell .v{font-size:13.5px;color:var(--ink)}
+.hero-cell .v.stamp{color:var(--stamp);font-weight:600}
+.hero-cell .v.stamp::before{content:'\25CF';margin-right:6px;font-size:8px;animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:0.3}}
+.hero-actions{display:flex;gap:0;margin-top:36px;flex-wrap:wrap}
+.btn{font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:0.4px;text-decoration:none;padding:13px 24px;border:1.5px solid var(--rule-bright);color:var(--ink);background:transparent;transition:all .3s;cursor:pointer;position:relative;overflow:hidden;display:inline-flex;align-items:center;gap:8px}
+.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:rgba(88,166,255,0.08);transition:left .4s ease}
+.btn:hover::before{left:0}
+.btn:hover{border-color:var(--blue);color:var(--cyan)}
+.btn.primary{background:var(--blue);color:var(--bg);border-color:var(--blue)}
+.btn.primary:hover{box-shadow:var(--glow-blue);color:var(--bg)}
+.btn+.btn{border-left:none}
+
+/* DIAGRAM */
+.hero-diagram{margin-top:64px}
+.hero-diagram svg{width:100%;height:auto;display:block}
+.diagram-caption{display:flex;justify-content:space-between;font-size:10.5px;color:var(--ink-soft);letter-spacing:0.5px;margin-top:10px;padding-top:8px;border-top:1px solid var(--rule)}
+.draw-line{stroke-dasharray:1400;stroke-dashoffset:1400}
+.draw-line.animate{animation:draw 2.4s ease-out forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+.diagram-node{opacity:0}
+.diagram-node.animate{animation:fadenode 0.5s ease-out forwards}
+@keyframes fadenode{to{opacity:1}}
+.ds-diagram svg rect,.hero-diagram svg rect{transition:filter .3s}
+.ds-diagram svg g:hover rect,.hero-diagram svg g:hover rect{filter:drop-shadow(0 0 6px rgba(88,166,255,0.4))}
+
+/* ABOUT */
+.about-body{display:grid;grid-template-columns:0.9fr 1.6fr;gap:56px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:12px;padding:36px 40px;box-shadow:var(--glass-shadow);transition:border-color .3s,box-shadow .3s}
+.about-body:hover{border-color:var(--glass-hover-border)}
+.about-tag{font-size:11px;color:var(--ink-soft);letter-spacing:1px;line-height:2.1}
+.about-copy{font-family:'Arvo',serif;font-size:1.15rem;line-height:1.75;max-width:640px;color:var(--ink)}
+.about-copy p+p{margin-top:1.1em}
+.about-copy .callout{color:var(--stamp);font-weight:700}
+
+/* DATASHEET */
+.datasheet{margin-bottom:64px;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:12px;padding:32px 36px;box-shadow:var(--glass-shadow);transition:opacity .3s,box-shadow .3s,border-color .3s,transform .3s}
+.datasheet:hover{border-color:var(--glass-hover-border);box-shadow:var(--glass-hover-shadow);transform:translateY(-2px)}
+.datasheet:last-child{margin-bottom:0}
+.ds-head{display:flex;justify-content:space-between;align-items:baseline;border-bottom:1px solid var(--rule-bright);padding-bottom:8px;margin-bottom:16px;gap:14px;flex-wrap:wrap}
+.ds-head h3{font-size:1.3rem;font-weight:700;color:var(--ink-bright);transition:color .3s}
+.ds-head h3 .cmd{color:var(--cyan);font-family:'IBM Plex Mono',monospace;font-size:0.7rem;font-weight:400;margin-right:8px}
+.datasheet:hover .ds-head h3{color:var(--cyan)}
+.ds-head .status{font-size:10px;color:var(--blue);letter-spacing:0.6px;white-space:nowrap}
+.ds-desc{font-family:'Arvo',serif;font-size:0.95rem;line-height:1.6;max-width:680px;margin-bottom:16px;color:var(--ink-soft)}
+.build-note{font-family:'Arvo',serif;font-size:0.9rem;line-height:1.65;max-width:680px;color:var(--ink-soft);background:rgba(68,147,255,0.04);border-left:3px solid var(--blue);padding:12px 18px;border-radius:0 8px 8px 0;margin-bottom:20px}
+.build-note strong{color:var(--cyan);font-weight:700}
+.build-note .label{display:inline-block;font-family:'IBM Plex Mono',monospace;font-size:10px;letter-spacing:0.6px;color:var(--blue);margin-bottom:4px;text-transform:uppercase}
+.ds-diagram{margin-bottom:20px;border:1px solid var(--glass-border);background:rgba(68,147,255,0.03);padding:16px;border-radius:8px;transition:border-color .3s,box-shadow .3s}
+.ds-diagram:hover{border-color:var(--blue);box-shadow:var(--glow-blue)}
+.ds-diagram svg{width:100%;height:auto;display:block}
+.ledger{width:100%;border-collapse:collapse;font-size:12.5px}
+.ledger th{text-align:left;font-weight:500;color:var(--ink-soft);letter-spacing:0.6px;font-size:10.5px;padding:8px 14px 8px 0;border-bottom:1px solid var(--rule-bright)}
+.ledger td{padding:8px 14px 8px 0;border-bottom:1px solid var(--rule);vertical-align:top;color:var(--ink)}
+.ledger tr:last-child td{border-bottom:none}
+.ledger tr{transition:background .2s}
+.ledger tr:hover{background:rgba(88,166,255,0.03)}
+.ledger .repo{font-size:11.5px}
+.ledger .repo a{text-decoration:none;color:var(--blue);transition:color .2s}
+.ledger .repo a:hover{color:var(--cyan)}
+.ledger .repo a::after{content:' \2192';opacity:0;transition:opacity .2s}
+.ledger .repo a:hover::after{opacity:1}
+.live-badge{display:inline-flex;align-items:center;gap:5px;font-size:10px;color:var(--emerald);padding:2px 10px;background:rgba(61,219,138,0.08);border:1px solid rgba(61,219,138,0.25);border-radius:6px;margin-left:10px;vertical-align:middle;text-decoration:none;transition:all .2s}
+.live-badge:hover{background:rgba(61,219,138,0.15)}
+.live-dot{width:6px;height:6px;border-radius:50%;background:var(--emerald);animation:pulse 2s ease-in-out infinite}
+.sleep-note{font-size:11px;color:var(--ink-faint);margin-top:6px;font-style:italic}
+
+/* OTHER TABLE */
+.other-table{width:100%;border-collapse:collapse;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:12px;overflow:hidden;box-shadow:var(--glass-shadow);transition:border-color .3s}
+.other-table:hover{border-color:var(--glass-hover-border)}
+.other-table th{text-align:left;font-size:10.5px;letter-spacing:0.6px;color:var(--ink-soft);font-weight:500;padding:16px 24px 10px;border-bottom:1px solid var(--rule-bright)}
+.other-table td{padding:16px 24px;border-bottom:1px solid var(--rule);vertical-align:top}
+.other-table tr{transition:background .2s}
+.other-table tr:hover{background:rgba(68,147,255,0.04)}
+.other-table td.name{font-family:'Arvo',serif;font-weight:700;font-size:1rem;white-space:nowrap}
+.other-table td.name a{text-decoration:none;color:var(--ink-bright);transition:color .2s}
+.other-table td.name a:hover{color:var(--cyan)}
+.other-table td.desc{font-size:12.5px;color:var(--ink-soft)}
+.other-table td.stack{font-size:11.5px;color:var(--blue);white-space:nowrap}
+
+/* SKILLS */
+.parts-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.parts-group{background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:12px;padding:28px 32px;box-shadow:var(--glass-shadow);transition:border-color .3s,box-shadow .3s}
+.parts-group:hover{border-color:var(--glass-hover-border)}
+.parts-group h4{font-family:'Arvo',serif;font-size:1.05rem;margin-bottom:14px;padding-bottom:8px;border-bottom:1px solid var(--rule-bright);color:var(--ink-bright)}
+.parts-list{list-style:none}
+.parts-list li{display:flex;justify-content:space-between;gap:12px;padding:9px 0;border-bottom:1px solid var(--rule);font-size:12.5px;color:var(--ink);transition:padding-left .2s}
+.parts-list li:last-child{border-bottom:none}
+.parts-list li:hover{padding-left:8px}
+.parts-list .role{color:var(--ink-soft);text-align:right}
+
+/* CONTACT */
+.contact-wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
+.contact-wrap>div,.contact-wrap>ul{background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border:1px solid var(--glass-border);border-radius:12px;padding:36px 40px;box-shadow:var(--glass-shadow);transition:border-color .3s}
+.contact-wrap>div:hover,.contact-wrap>ul:hover{border-color:var(--glass-hover-border)}
+.stamp-box{border:2px solid var(--stamp);color:var(--stamp);display:inline-block;padding:14px 22px;font-weight:600;letter-spacing:1px;font-size:13px;transform:rotate(-2deg);margin-bottom:28px;position:relative}
+.stamp-box::before{content:'\25CF';margin-right:8px;font-size:8px;animation:pulse 2s ease-in-out infinite}
+.contact-copy{font-family:'Arvo',serif;font-size:1.1rem;line-height:1.7;max-width:480px;margin-bottom:32px;color:var(--ink)}
+.directory{list-style:none}
+.directory li{display:flex;justify-content:space-between;align-items:center;padding:14px 0;border-bottom:1px solid var(--rule);font-size:13px;transition:padding-left .2s}
+.directory li:hover{padding-left:8px}
+.directory li a{text-decoration:none;color:var(--blue);transition:color .2s}
+.directory li a:hover{color:var(--cyan)}
+.directory .k{color:var(--ink-soft);font-size:11px;letter-spacing:0.6px}
+.looking-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-bottom:28px}
+.looking-table td{padding:12px 0;border-bottom:1px solid var(--rule)}
+.looking-table td:first-child{color:var(--ink-soft);width:40%;font-size:11px;letter-spacing:0.4px}
+.looking-table td:last-child{color:var(--ink)}
+
+/* FOOTER */
+footer{padding:28px 0}
+footer .wrap{display:flex;justify-content:space-between;font-size:11px;color:var(--ink-soft);letter-spacing:0.3px;flex-wrap:wrap;gap:8px}
+
+/* BACK TO TOP */
+.back-top{position:fixed;bottom:24px;right:24px;width:40px;height:40px;border:1px solid var(--glass-border);background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);border-radius:50%;color:var(--ink);font-size:16px;cursor:pointer;z-index:40;opacity:0;transition:opacity .3s,transform .3s,border-color .3s;pointer-events:none;display:flex;align-items:center;justify-content:center}
+.back-top.show{opacity:1;pointer-events:auto}
+.back-top:hover{border-color:var(--cyan);color:var(--cyan);transform:translateY(-3px)}
+
+/* RESPONSIVE */
+@media(max-width:860px){
+  .about-body{grid-template-columns:1fr;gap:20px}
+  .parts-grid{grid-template-columns:1fr}
+  .contact-wrap{grid-template-columns:1fr}
+  .hero-grid{grid-template-columns:1fr}
+  .hero-cell:nth-child(odd){border-right:none}
+  .other-table{font-size:12px}
+  .other-table thead{display:none}
+  .other-table tr{display:block;padding:14px 0;border-bottom:1px solid var(--rule)}
+  .other-table td{display:block;border-bottom:none;padding:3px 0}
+}
+@media(max-width:700px){
+  .tb-nav{display:none;position:absolute;top:56px;left:0;right:0;background:var(--bg-2);flex-direction:column;border-bottom:1px solid var(--rule-bright)}
+  .tb-nav.open{display:flex}
+  .tb-nav a{border-left:none;border-top:1px solid var(--rule);padding:14px 20px}
+  .tb-toggle{display:block}
+  section{padding:64px 0}
+  .hero{padding-top:40px;padding-bottom:56px}
+  .hero-actions{flex-direction:column}
+  .btn{width:100%;justify-content:center}
+  .btn+.btn{border-left:none;border-top:none}
+}
+</style>
+<style>
+
+
+.hero-terminal .system-name{color:var(--cyan);font-weight:600;letter-spacing:.25px;white-space:nowrap}
+.hero-terminal .term-sep{color:var(--ink-faint);margin:0 5px}
+.hero-terminal .term-line{flex-wrap:wrap}
+.hero-terminal .cursor{margin-left:4px}
+@media(max-width:700px){
+  .hero-terminal{padding:15px 16px;font-size:11.5px}
+  .hero-terminal .system-name{font-size:10.5px}
+  .hero-terminal .term-sep{margin:0 3px}
+}
+
+/* V2 refinement: recruiter-first scan layer */
+.recruiter-snapshot{display:grid;grid-template-columns:repeat(4,1fr);gap:0;margin-top:42px;border:1px solid var(--glass-border);border-radius:12px;overflow:hidden;background:var(--glass-bg);backdrop-filter:var(--glass-blur);-webkit-backdrop-filter:var(--glass-blur);box-shadow:var(--glass-shadow)}
+.snapshot-cell{padding:18px 20px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);min-height:86px}
+.snapshot-cell:nth-child(4n){border-right:none}
+.snapshot-cell:nth-last-child(-n+4){border-bottom:none}
+.snapshot-k{font-size:10px;letter-spacing:1px;color:var(--ink-soft);margin-bottom:5px}
+.snapshot-v{font-family:'IBM Plex Sans',sans-serif;font-size:14px;font-weight:600;color:var(--ink-bright)}
+.snapshot-v.accent{color:var(--cyan)}
+.snapshot-v a{text-decoration:none;color:inherit}
+.snapshot-v a:hover{color:var(--cyan)}
+.section-intro{font-family:'Arvo',serif;color:var(--ink-soft);font-size:.98rem;line-height:1.65;max-width:720px;margin:-22px 0 36px}
+.system-why{margin:0 0 20px;padding:12px 16px;border:1px solid var(--rule);border-radius:8px;background:rgba(68,147,255,.025);font-family:'IBM Plex Sans',sans-serif;font-size:12px;line-height:1.55;color:var(--ink-soft)}
+.system-why strong{color:var(--cyan);font-weight:600}
+.ds-actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:16px}
+.ds-actions a{font-family:'IBM Plex Mono',monospace;font-size:11px;text-decoration:none;color:var(--blue);border:1px solid var(--rule-bright);padding:7px 11px;border-radius:5px;transition:.2s}
+.ds-actions a:hover{color:var(--cyan);border-color:var(--cyan);background:var(--hover-tint)}
+.metric-strip{display:flex;gap:8px;flex-wrap:wrap;margin:0 0 18px}
+.metric{font-family:'IBM Plex Mono',monospace;font-size:10.5px;color:var(--ink-soft);padding:6px 9px;border:1px solid var(--rule);border-radius:5px;background:rgba(68,147,255,.025)}
+.metric strong{color:var(--ink-bright);font-weight:600}
+.capability-note{font-family:'IBM Plex Sans',sans-serif;font-size:12px;color:var(--ink-soft);margin:-24px 0 26px;max-width:760px}
+.hero-terminal .typed{min-height:20px}
+@media(max-width:860px){
+  .recruiter-snapshot{grid-template-columns:repeat(2,1fr)}
+  .snapshot-cell:nth-child(4n){border-right:1px solid var(--rule)}
+  .snapshot-cell:nth-child(2n){border-right:none}
+  .snapshot-cell:nth-last-child(-n+4){border-bottom:1px solid var(--rule)}
+  .snapshot-cell:nth-last-child(-n+2){border-bottom:none}
+}
+@media(max-width:700px){
+  .recruiter-snapshot{grid-template-columns:1fr}
+  .snapshot-cell,.snapshot-cell:nth-child(2n),.snapshot-cell:nth-child(4n){border-right:none;border-bottom:1px solid var(--rule)}
+  .snapshot-cell:last-child{border-bottom:none}
+  .section-intro{font-size:.92rem}
+}
+.particles-bg{position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden}
+.particle{position:absolute;border-radius:50%;background:var(--blue);opacity:0.25;bottom:-10px;animation:floatUp linear infinite}
+@keyframes floatUp{0%{transform:translateY(0);opacity:0}10%{opacity:0.25}90%{opacity:0.25}100%{transform:translateY(-100vh);opacity:0}}
+@media(max-width:700px){.particle{opacity:.12!important}}
+</style>
 </head>
+<body>
+<a href="#top" class="skip-link">Skip to content</a>
+<div class="particles-bg" id="particlesBg" aria-hidden="true"></div>
 
-<body class="bg-black text-gray-100 overflow-x-hidden">
-    <div id="particles-js"></div>
-    
-    <div class="content-layer">
-        <!-- Enhanced Header -->
-        <header class="glass sticky top-0 z-50 p-4">
-            <div class="max-w-7xl mx-auto flex justify-between items-center">
-                <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                        <i class="fas fa-terminal text-black font-bold"></i>
-                    </div>
-                    <h1 class="text-xl font-bold mono gradient-text">Harsh.ai</h1>
-                </div>
-                <nav class="hidden md:flex space-x-8">
-                    <a href="#about" class="text-white hover:text-cyan-400 transition duration-300 font-medium">About</a>
-                    <a href="#projects" class="text-white hover:text-cyan-400 transition duration-300 font-medium">Projects</a>
-                    <a href="#skills" class="text-white hover:text-cyan-400 transition duration-300 font-medium">Skills</a>
-                    <a href="#contact" class="text-white hover:text-cyan-400 transition duration-300 font-medium">Contact</a>
-                </nav>
-                <div class="md:hidden">
-                    <button id="mobile-menu-btn" class="text-white">
-                        <i class="fas fa-bars"></i>
-                    </button>
-                </div>
-            </div>
-        </header>
+<header class="titlebar" id="titlebar">
+  <div class="wrap">
+    <a href="#top" class="tb-mark slab" aria-label="Home">
+      <span class="box">HB</span>
+      <span>Harsh Bhanushali</span>
+    </a>
+    <nav class="tb-nav" id="tbNav" aria-label="Main navigation">
+      <a href="#about">About</a>
+      <a href="#work">Systems</a>
+      <a href="#skills">Capabilities</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="tb-right">
+      <a href="https://www.linkedin.com/in/harshbhanushali0709" target="_blank" rel="noopener" class="tb-icon-link" aria-label="LinkedIn">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+      </a>
+      <a href="https://github.com/harshbhanushali26" target="_blank" rel="noopener" class="tb-icon-link" aria-label="GitHub">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+      </a>
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light/dark"></button>
+      <button class="tb-toggle" id="tbToggle" aria-label="Toggle menu" aria-expanded="false">&#8801;</button>
+    </div>
+  </div>
+</header>
 
-        <!-- Hero Section -->
-        <section class="min-h-screen flex items-center justify-center px-4 relative">
-            <div class="max-w-5xl text-center space-y-8">
-                <!-- Status Badge -->
-                <div class="inline-flex items-center space-x-2 bg-green-500/10 border border-green-500/30 rounded-full px-4 py-2 pulse-border">
-                    <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                    <span class="text-green-400 text-sm font-medium">Available for opportunities</span>
-                </div>
-                
-                <h1 class="text-5xl md:text-7xl font-bold tracking-tight leading-tight">
-                    <span class="gradient-text">AI</span>
-                    <br />
-                    <span class="text-white">Engineer</span>
-                </h1>
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <h1 class="hero-title slab">Harsh Bhanushali<span class="accent">.</span></h1>
+    <p class="hero-role">AI Systems & Autonomous Agents Engineer building stateful agent workflows, RAG systems, and tool-execution pipelines — architecture first, inference second.</p>
 
-                <h2 class="text-xl md:text-2xl font-semibold text-gray-400 mono">
-                    Agentic AI Developer · Multi-Agent Workflows · Custom RAG Pipelines · MCP · FastAPI
-                </h2>
-
-                <h2 class="text-2xl md:text-4xl font-semibold text-cyan-400 mono">
-                    <span id="typed-text"></span>
-                </h2>
-
-                <p class="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-                    Building autonomous AI systems, RAG pipelines, and structured LLM workflows
-                    <br class="hidden md:block" />
-                    from scratch in Python — <strong class="text-cyan-400">deliberate framework usage, full architectural control.</strong>
-                </p>
-
-                <!-- Metrics Row -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4 max-w-2xl mx-auto mt-12">
-                    <div class="metric-card rounded-xl p-4">
-                        <div class="text-2xl font-bold text-cyan-400">7</div>
-                        <div class="text-sm text-gray-400">Projects Shipped</div>
-                    </div>
-                    <div class="metric-card rounded-xl p-4">
-                        <div class="text-2xl font-bold text-cyan-400">Hybrid</div>
-                        <div class="text-sm text-gray-400">RAG: pgvector + tsvector</div>
-                    </div>
-                    <div class="metric-card rounded-xl p-4">
-                        <div class="text-2xl font-bold text-cyan-400">~80%</div>
-                        <div class="text-sm text-gray-400">API Calls Saved</div>
-                    </div>
-                    <div class="metric-card rounded-xl p-4">
-                        <div class="text-2xl font-bold text-cyan-400">3 Gens</div>
-                        <div class="text-sm text-gray-400">Finance Stack Iterations</div>
-                    </div>
-                </div>
-
-                <div class="flex flex-wrap justify-center gap-6 pt-8">
-                    <a href="#projects" class="bg-gradient-to-r from-cyan-400 to-blue-500 text-black px-8 py-4 rounded-xl font-semibold hover:shadow-lg hover:shadow-cyan-400/25 transition-all duration-300 glow-effect">
-                        <i class="fas fa-code mr-2"></i>View Projects
-                    </a>
-                    <a href="/resume.pdf" class="border-2 border-cyan-400 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-400 hover:text-black transition-all duration-300">
-                        <i class="fas fa-download mr-2"></i>Download Resume
-                    </a>
-                    <a href="#contact" class="border-2 border-gray-600 px-8 py-4 rounded-xl font-semibold hover:border-cyan-400 hover:text-cyan-400 transition-all duration-300">
-                        <i class="fas fa-envelope mr-2"></i>Let's Talk
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- About Section with Terminal -->
-        <section id="about" class="py-20 px-6">
-            <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                
-                <!-- Terminal Demo -->
-                <div class="floating">
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <div class="terminal-dot bg-red-500"></div>
-                            <div class="terminal-dot bg-yellow-500"></div>
-                            <div class="terminal-dot bg-green-500"></div>
-                            <span class="text-gray-400 text-sm ml-4">harsh@dev:~$</span>
-                        </div>
-                        <div class="terminal-body">
-                            <div class="mb-4">
-                                <span class="text-blue-400">$</span> python -c "import harsh; harsh.introduce()"
-                            </div>
-                            <div class="text-gray-300 mb-2">
-                                Initializing Harsh Bhanushali — AI Engineer...
-                            </div>
-                            <div class="mb-4">
-                                <div class="text-cyan-400">✓ Agentic AI: Autonomous systems, RAG, LLM Orchestration</div>
-                                <div class="text-cyan-400">✓ AI Stack: Groq API, Gemini API, Supabase + pgvector, DuckDB, LangGraph, MCP</div>
-                                <div class="text-cyan-400">✓ APIs & UI: FastAPI, Streamlit, DuckDuckGo, Tavily</div>
-                                <div class="text-cyan-400">✓ CLI Tools: Rich, Python, SQLite/JSON storage</div>
-                                <div class="text-cyan-400">✓ Backend: ASP.NET (C#), SQL Server, HTML/CSS/JS</div>
-                            </div>
-                            <div class="mb-2">
-                                <span class="text-blue-400">$</span> harsh.currently_learning()
-                            </div>
-                            <div class="text-yellow-400 mb-4">
-                                > ["Docker", "Ollama (local models)", "eval frameworks"]
-                            </div>
-                            <div class="mb-2">
-                                <span class="text-blue-400">$</span> harsh.get_availability()
-                            </div>
-                            <div class="text-green-400">
-                                > "Open to AI Engineer roles | Entry-level | Remote-friendly"
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- About Content -->
-                <div class="space-y-8">
-                    <div>
-                        <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">About Me</h2>
-                        <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mb-8"></div>
-                    </div>
-                    
-                    <div class="space-y-6 text-lg leading-relaxed">
-                        <p class="text-gray-300">
-                            I'm an <strong class="text-cyan-400">AI Engineer</strong> who builds agentic AI systems in Python — using frameworks deliberately and purposefully, with full understanding of every architectural layer underneath.
-                        </p>
-                        
-                        <p class="text-gray-400">
-                            My focus is on <strong class="text-white">RAG pipelines</strong>, <strong class="text-white">multi-agent workflows</strong>, and <strong class="text-white">cost-aware AI design</strong>. I also have hands-on production experience building enterprise web applications during my full-stack engineering internship — shipping 3 apps, improving workflow efficiency by 30%, and rebuilding a complete system under live client requirements.
-                        </p>
-                        
-                        <div class="bg-gradient-to-r from-cyan-400/10 to-blue-500/10 border-l-4 border-cyan-400 p-6 rounded-r-lg">
-                            <p class="text-cyan-300 font-medium">
-                                "I use frameworks deliberately — always understanding the layer beneath before I abstract it away."
-                            </p>
-                        </div>
-                    </div>
-
-                    <!-- Key Strengths -->
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mt-8">
-                        <div class="skill-badge rounded-lg p-4">
-                            <i class="fas fa-robot text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Agentic AI Systems</div>
-                            <div class="text-sm text-gray-400">Autonomous agents from scratch</div>
-                        </div>
-                        <div class="skill-badge rounded-lg p-4">
-                            <i class="fas fa-database text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Hybrid RAG & Search</div>
-                            <div class="text-sm text-gray-400">Supabase · pgvector · DuckDB</div>
-                        </div>
-                        <div class="skill-badge rounded-lg p-4">
-                            <i class="fas fa-terminal text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">CLI Engineering</div>
-                            <div class="text-sm text-gray-400">Python · Rich · Modular design</div>
-                        </div>
-                        <div class="skill-badge rounded-lg p-4">
-                            <i class="fas fa-layer-group text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Full-Stack Backend</div>
-                            <div class="text-sm text-gray-400">FastAPI · ASP.NET · SQL</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Projects Section -->
-        <section id="projects" class="py-20 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Featured Projects</h2>
-                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-6"></div>
-                    <p class="text-gray-400 text-xl max-w-2xl mx-auto">
-                        Shipped Python applications spanning agentic AI, retrieval systems, and backend architecture
-                    </p>
-                </div>
-
-                <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-2">
-
-                    <!-- hArI v2 -->
-                    <div class="project-card p-8 rounded-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-600 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-file-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-cyan-300">hArI v2</h3>
-                                    <div class="text-sm text-gray-500">RAG Document Intelligence · Deployed</div>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <span class="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">RAG</span>
-                                <span class="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">Supabase</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Rebuilt from a single-store ChromaDB prototype into a hybrid-search, multi-user system — upload PDFs or CSVs, ask questions, get cited answers.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Hybrid retrieval: pgvector similarity + tsvector full-text via custom Supabase RPC</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>DuckDB SQL engine replacing pandas.exec() for safe multi-CSV queries</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Supabase Auth, per-user chat persistence, citation UI + telemetry feedback</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="text-gray-500">Python</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Supabase</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">pgvector</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">DuckDB</span>
-                            </div>
-                            <div class="flex space-x-3">
-                                <a href="https://github.com/harshbhanushali26/hArI" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Multi-Agent Research Pipeline -->
-                    <div class="project-card p-8 rounded-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-network-wired text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-cyan-300">Multi-Agent Research Pipeline</h3>
-                                    <div class="text-sm text-gray-500">Agentic Research System · Shipped</div>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <span class="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">Agents</span>
-                                <span class="px-2 py-1 text-xs bg-indigo-500/20 text-indigo-300 rounded">Groq</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            6-agent autonomous research pipeline — Supervisor, Search, Scraper, Summarizer, Critic, Synthesizer — with complexity-based model routing and quota-aware fallback between Groq and Gemini.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Groq (llama-3.3-70b) primary · Gemini (gemini-2.0-flash) fallback</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>DuckDuckGo search + web scraping per query</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>CLI displays which model handled each agent in real-time</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="text-gray-500">Python</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Groq API</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Gemini API</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Rich CLI</span>
-                            </div>
-                            <div class="flex space-x-3">
-                                <a href="https://github.com/harshbhanushali26/research-pipeline" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- AI Agent Engine -->
-                    <div class="project-card p-8 rounded-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-robot text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-cyan-300">AI Agent Engine</h3>
-                                    <div class="text-sm text-gray-500">Autonomous AI System · Shipped</div>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <span class="px-2 py-1 text-xs bg-purple-500/20 text-purple-300 rounded">RAG</span>
-                                <span class="px-2 py-1 text-xs bg-blue-500/20 text-blue-300 rounded">LLM</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Production-grade autonomous agent — 4-layer pipeline (cache → pattern router → RAG → LLM) routing roughly 80% of queries with 0 LLM calls. Per-session cost roughly $0.0005.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>ChromaDB + SentenceTransformer RAG with roughly 30ms latency</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Cost-aware token tracking & daily quota enforcement</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Planner → Validator → Executor → Responder pipeline</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="text-gray-500">Python</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Gemini API</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">ChromaDB</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">SentenceTransformer</span>
-                            </div>
-                            <div class="flex space-x-3">
-                                <a href="https://github.com/harshbhanushali26/ai-agent-engine" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- FinOS -->
-                    <div class="project-card p-8 rounded-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-wallet text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-cyan-300">FinOS</h3>
-                                    <div class="text-sm text-gray-500">Full-Stack AI Finance Platform · Shipped</div>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <span class="px-2 py-1 text-xs bg-green-500/20 text-green-300 rounded">FastAPI</span>
-                                <span class="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">Groq</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Third-generation finance system — dashboard for passive logging plus a conversational agent for active querying, both writing to the same SQLite store.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Roughly 60% of queries answered by pattern matching, 0 LLM calls; complex queries stream via Groq + SSE</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Financial health scoring, spending forecasts, budget threshold alerts</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>bcrypt-hardened auth with session tokens and CLI-based recovery</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="text-gray-500">Python</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">FastAPI</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">SQLModel</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Groq API</span>
-                            </div>
-                            <div class="flex space-x-3">
-                                <a href="https://github.com/harshbhanushali26/finos" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- NextSteps -->
-                    <div class="project-card p-8 rounded-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-orange-500 to-amber-500 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-route text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-cyan-300">NextSteps</h3>
-                                    <div class="text-sm text-gray-500">AI Career Planning App · Shipped</div>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <span class="px-2 py-1 text-xs bg-orange-500/20 text-orange-300 rounded">FastAPI</span>
-                                <span class="px-2 py-1 text-xs bg-amber-500/20 text-amber-300 rounded">LLM</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            AI career planning app that analyzes a resume against a job description or URL — delivers full gap analysis, skill mapping, and personalized roadmap in under 5–8 minutes. Clean separation between parsing, analysis, and output generation with no hardcoded assumptions about resume or job format.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Resume vs JD gap analysis with skill mapping</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>URL-based JD parsing — no manual copy-paste</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Modular pipeline: parse → analyze → output</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="text-gray-500">Python</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">FastAPI</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Groq API</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Tavily</span>
-                            </div>
-                            <div class="flex space-x-3">
-                                <a href="https://github.com/harshbhanushali26/NextSteps" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- DevMind -->
-                    <div class="project-card p-8 rounded-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-plug text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-cyan-300">DevMind — MCP Server</h3>
-                                    <div class="text-sm text-gray-500">MCP Tool Server · Shipped</div>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <span class="px-2 py-1 text-xs bg-violet-500/20 text-violet-300 rounded">MCP</span>
-                                <span class="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">HITL</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            A local MCP server exposing 6 developer tools — file ops, Python execution, and JSON utilities — with human-in-the-loop confirmation built into any action that writes or runs code.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>6 tools: read_file, write_file, list_directory, run_python_snippet, format_json, count_tokens</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>HITL guardrails on write and run — no side effects without explicit confirmation</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Solved subprocess stdin isolation bug that silently breaks naive MCP implementations</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="text-gray-500">Python</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">MCP SDK</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">tiktoken</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">uv</span>
-                            </div>
-                            <div class="flex space-x-3">
-                                <a href="https://github.com/harshbhanushali26/mcp-implementations" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- LangGraph Parallel SQL Runner -->
-                    <div class="project-card p-8 rounded-2xl">
-                        <div class="flex items-center justify-between mb-4">
-                            <div class="flex items-center space-x-3">
-                                <div class="w-12 h-12 bg-gradient-to-r from-sky-500 to-cyan-600 rounded-lg flex items-center justify-center">
-                                    <i class="fas fa-diagram-project text-white"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-xl font-bold text-cyan-300">LangGraph Parallel SQL Runner</h3>
-                                    <div class="text-sm text-gray-500">Multi-Agent SQL System · Shipped</div>
-                                </div>
-                            </div>
-                            <div class="flex space-x-2">
-                                <span class="px-2 py-1 text-xs bg-sky-500/20 text-sky-300 rounded">LangGraph</span>
-                                <span class="px-2 py-1 text-xs bg-cyan-500/20 text-cyan-300 rounded">HITL</span>
-                            </div>
-                        </div>
-                        <p class="text-gray-400 mb-6 leading-relaxed">
-                            Multi-question parallel SQL execution using LangGraph's Send API for dynamic fan-out across schema analysis and execution nodes, with inline review before any query fires.
-                        </p>
-                        <div class="space-y-3 mb-6">
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Send-based fan-out with operator.add reducer for parallel branches</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>Pydantic-validated question and result models</span>
-                            </div>
-                            <div class="flex items-center space-x-2 text-sm">
-                                <i class="fas fa-check text-green-400"></i>
-                                <span>HITL review gate before any query executes against the database</span>
-                            </div>
-                        </div>
-                        <div class="flex justify-between items-center">
-                            <div class="flex flex-wrap gap-2 text-xs">
-                                <span class="text-gray-500">LangGraph</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Groq API</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">SQLite</span>
-                                <span class="text-gray-500">•</span>
-                                <span class="text-gray-500">Pydantic</span>
-                            </div>
-                            <div class="flex space-x-3">
-                                <a href="https://github.com/harshbhanushali26/langgraph-parallel-sql" target="_blank" class="text-cyan-400 hover:text-cyan-300 transition">
-                                    <i class="fab fa-github"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-                    
-                <!-- View All Projects Button -->
-                <div class="text-center mt-12">
-                    <a href="https://github.com/harshbhanushali26" target="_blank" class="inline-flex items-center space-x-2 bg-gradient-to-r from-cyan-400/10 to-blue-500/10 border border-cyan-400/30 px-8 py-4 rounded-xl font-semibold hover:bg-cyan-400/20 transition-all duration-300">
-                        <i class="fab fa-github"></i>
-                        <span>View All Projects on GitHub</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Skills Section -->
-        <section id="skills" class="py-20 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Technical Expertise</h2>
-                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-6"></div>
-                    <p class="text-gray-400 text-xl max-w-2xl mx-auto">
-                        Hands-on skills across Python, agentic AI, and backend engineering — built and tested in real projects
-                    </p>
-                </div>
-
-                <!-- Primary Skills -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-bold text-white mb-8 text-center">Core Specializations</h3>
-                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                        
-                        <div class="skill-badge rounded-2xl p-8 text-center group">
-                            <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-robot text-2xl text-white"></i>
-                            </div>
-                            <h4 class="text-xl font-bold mb-2">Agentic AI</h4>
-                            <p class="text-gray-400 text-sm mb-4">Autonomous systems built from scratch</p>
-                            <div class="text-xs space-y-1">
-                                <div class="text-cyan-400">• RAG, LLM Orchestration, Tool-Calling</div>
-                                <div class="text-cyan-400">• Groq API, Gemini API, Supabase</div>
-                                <div class="text-cyan-400">• Cost-aware AI design</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-badge rounded-2xl p-8 text-center group">
-                            <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-terminal text-2xl text-white"></i>
-                            </div>
-                            <h4 class="text-xl font-bold mb-2">CLI Engineering</h4>
-                            <p class="text-gray-400 text-sm mb-4">Modular Python CLI systems</p>
-                            <div class="text-xs space-y-1">
-                                <div class="text-cyan-400">• Python, Rich, JSON storage</div>
-                                <div class="text-cyan-400">• OOP, modular architecture</div>
-                                <div class="text-cyan-400">• Session management, auth</div>
-                            </div>
-                        </div>
-
-                        <div class="skill-badge rounded-2xl p-8 text-center group">
-                            <div class="w-16 h-16 bg-gradient-to-r from-orange-500 to-red-500 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform">
-                                <i class="fas fa-server text-2xl text-white"></i>
-                            </div>
-                            <h4 class="text-xl font-bold mb-2">Full-Stack Backend</h4>
-                            <p class="text-gray-400 text-sm mb-4">Enterprise web applications</p>
-                            <div class="text-xs space-y-1">
-                                <div class="text-cyan-400">• FastAPI, ASP.NET (C#), SQL Server</div>
-                                <div class="text-cyan-400">• HTML, CSS, Bootstrap, JS</div>
-                                <div class="text-cyan-400">• Dashboards</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Technology Stack -->
-                <div class="mb-12">
-                    <h3 class="text-2xl font-bold text-white mb-8 text-center">Technology Stack</h3>
-                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fab fa-python text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Python</div>
-                            <div class="text-xs text-gray-400">Intermediate+</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-database text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">SQL</div>
-                            <div class="text-xs text-gray-400">Proficient</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fab fa-js-square text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">JavaScript</div>
-                            <div class="text-xs text-gray-400">Familiar</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-bolt text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Supabase</div>
-                            <div class="text-xs text-gray-400">pgvector / Auth</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-table text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">DuckDB</div>
-                            <div class="text-xs text-gray-400">In-memory SQL</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-robot text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Groq API</div>
-                            <div class="text-xs text-gray-400">LLM Layer</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-stream text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Streamlit</div>
-                            <div class="text-xs text-gray-400">AI UIs</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-bolt text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">FastAPI</div>
-                            <div class="text-xs text-gray-400">Backend APIs</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-project-diagram text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">LangGraph</div>
-                            <div class="text-xs text-gray-400">Agent Graphs</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fas fa-plug text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">MCP</div>
-                            <div class="text-xs text-gray-400">Tool Servers</div>
-                        </div>
-                        <div class="skill-badge rounded-xl p-4 text-center">
-                            <i class="fab fa-github text-2xl text-cyan-400 mb-2"></i>
-                            <div class="font-semibold">Git / GitHub</div>
-                            <div class="text-xs text-gray-400">Version Control</div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certifications & Achievements -->
-                <div class="bg-gradient-to-r from-cyan-400/5 to-blue-500/5 border border-cyan-400/20 rounded-2xl p-8">
-                    <h3 class="text-2xl font-bold text-white mb-6 text-center">Certifications & Recognition</h3>
-                    <div class="grid md:grid-cols-2 gap-6">
-                        <div class="text-center">
-                            <div class="w-12 h-12 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-graduation-cap text-white"></i>
-                            </div>
-                            <div class="font-semibold">B.E. Information Technology</div>
-                            <div class="text-sm text-gray-400">GEC Modasa · 2024</div>
-                        </div>
-                        <div class="text-center">
-                            <div class="w-12 h-12 bg-gradient-to-r from-purple-500 to-pink-500 rounded-lg flex items-center justify-center mx-auto mb-3">
-                                <i class="fas fa-certificate text-white"></i>
-                            </div>
-                            <div class="font-semibold">GATE 2025 Qualified</div>
-                            <div class="text-sm text-gray-400">Computer Science Engineering (CSE)</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contact Section -->
-        <section id="contact" class="py-20 px-6">
-            <div class="max-w-4xl mx-auto">
-                <div class="text-center mb-16">
-                    <h2 class="text-4xl md:text-5xl font-bold gradient-text mb-6">Let's Build Something Real</h2>
-                    <div class="w-20 h-1 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-full mx-auto mb-6"></div>
-                    <p class="text-gray-400 text-xl max-w-2xl mx-auto">
-                        AI Engineer open to full-time roles and internships at AI-first startups — reach out if you're hiring or just want to talk shop.
-                    </p>
-                </div>
-
-                <!-- Contact Cards -->
-                <div class="grid md:grid-cols-2 gap-8 mb-12">
-                    <!-- Hire Me Card -->
-                    <div class="glass rounded-2xl p-8 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-green-500 to-emerald-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-handshake text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Open to Opportunities</h3>
-                        <p class="text-gray-400 mb-6">Looking for entry-level AI Engineer, ML Engineer, or Python Developer roles at AI-first startups.</p>
-                        <a href="https://mail.google.com/mail/?view=cm&to=harshbhanu0709@gmail.com" target="_blank" class="bg-gradient-to-r from-green-500 to-emerald-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                            <i class="fas fa-envelope mr-2"></i>Get In Touch
-                        </a>
-                    </div>
-                    
-                    <!-- Collaboration Card -->
-                    <div class="glass rounded-2xl p-8 text-center">
-                        <div class="w-16 h-16 bg-gradient-to-r from-purple-500 to-pink-500 rounded-xl flex items-center justify-center mx-auto mb-4">
-                            <i class="fas fa-code-branch text-2xl text-white"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Open Source & Collaboration</h3>
-                        <p class="text-gray-400 mb-6">Interested in contributing to open source projects or technical partnerships.</p>
-                        <a href="https://github.com/harshbhanushali26" target="_blank" class="bg-gradient-to-r from-purple-500 to-pink-500 text-white px-6 py-3 rounded-lg font-semibold hover:shadow-lg transition-all duration-300 inline-block">
-                            <i class="fab fa-github mr-2"></i>View GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Social Links -->
-                <div class="text-center">
-                    <div class="flex justify-center gap-6 text-2xl mb-8">
-                        <a href="https://github.com/harshbhanushali26" target="_blank" class="w-14 h-14 bg-gradient-to-r from-gray-700 to-gray-600 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/harshbhanushali0709" target="_blank" class="w-14 h-14 bg-gradient-to-r from-blue-600 to-blue-500 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://mail.google.com/mail/?view=cm&to=harshbhanu0709@gmail.com" target="_blank" class="w-14 h-14 bg-gradient-to-r from-red-600 to-red-500 rounded-xl flex items-center justify-center text-white hover:scale-110 transition-all duration-300 hover:shadow-lg">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                    
-                    <!-- Quick Contact Info -->
-                    <div class="flex flex-wrap justify-center gap-8 text-gray-400">
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-envelope text-cyan-400"></i>
-                            <span>harshbhanu0709@gmail.com</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-map-marker-alt text-cyan-400"></i>
-                            <span>Gujarat, India · Open to Remote</span>
-                        </div>
-                        <div class="flex items-center space-x-2">
-                            <i class="fas fa-clock text-cyan-400"></i>
-                            <span>Available immediately</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Footer -->
-        <footer class="glass py-8 px-6">
-            <div class="max-w-6xl mx-auto">
-                <div class="flex flex-col md:flex-row justify-between items-center">
-                    <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                        <div class="w-8 h-8 bg-gradient-to-r from-cyan-400 to-blue-500 rounded-lg flex items-center justify-center">
-                            <i class="fas fa-terminal text-black text-sm"></i>
-                        </div>
-                        <span class="font-bold mono gradient-text">Harsh.ai</span>
-                    </div>
-                    <div class="text-gray-400 text-sm text-center md:text-right">
-                        <p>© 2026 Harsh Bhanushali. Built with passion & Python.</p>
-                        <p class="mt-1">Building autonomous AI systems, one layer at a time.</p>
-                    </div>
-                </div>
-            </div>
-        </footer>
-
-        <!-- Back to Top Button -->
-        <button onclick="window.scrollTo({ top: 0, behavior: 'smooth' })" 
-                class="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-cyan-400 to-blue-500 hover:from-cyan-300 hover:to-blue-400 text-black rounded-full shadow-lg transition-all duration-300 z-50 hidden glow-effect" 
-                id="backToTop">
-            <i class="fas fa-chevron-up"></i>
-        </button>
+    <div class="hero-terminal" id="heroTerm" aria-label="Selected system metrics">
+      <div class="term-line" id="line1"><span class="prompt">$</span><span class="system-name">AI_AGENT_ENGINE</span><span class="term-sep">:</span><span class="typed" id="typed1">~80% of queries routed with 0 LLM calls</span><span class="cursor" id="cursor1"></span></div>
+      <!-- <div class="term-line hidden" id="line2"><span class="prompt">$</span><span class="system-name">AI_AGENT_ENGINE</span><span class="term-sep">:</span><span class="typed" id="typed2">~$0.0005 measured cost per session</span><span class="cursor" id="cursor2"></span></div> -->
+      <div class="term-line hidden" id="line3"><span class="prompt">$</span><span class="system-name">hArI</span><span class="term-sep">:</span><span class="typed" id="typed3">hybrid retrieval, pgvector + tsvector via RPC</span><span class="cursor" id="cursor3"></span></div>
+      <div class="term-line hidden" id="line4"><span class="prompt">$</span><span class="system-name">WAYPOINT</span><span class="term-sep">:</span><span class="typed" id="typed4">5 agents, 7 tool nodes, human review</span><span class="cursor" id="cursor4"></span></div>
     </div>
 
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        // Particles.js configuration
-        particlesJS('particles-js', {
-            particles: {
-                number: {
-                    value: 80,
-                    density: {
-                        enable: true,
-                        value_area: 800
-                    }
-                },
-                color: {
-                    value: '#22d3ee'
-                },
-                shape: {
-                    type: 'circle',
-                    stroke: {
-                        width: 0,
-                        color: '#000000'
-                    }
-                },
-                opacity: {
-                    value: 0.5,
-                    random: false,
-                    anim: {
-                        enable: false,
-                        speed: 1,
-                        opacity_min: 0.1,
-                        sync: false
-                    }
-                },
-                size: {
-                    value: 3,
-                    random: true,
-                    anim: {
-                        enable: false,
-                        speed: 40,
-                        size_min: 0.1,
-                        sync: false
-                    }
-                },
-                line_linked: {
-                    enable: true,
-                    distance: 150,
-                    color: '#22d3ee',
-                    opacity: 0.4,
-                    width: 1
-                },
-                move: {
-                    enable: true,
-                    speed: 6,
-                    direction: 'none',
-                    random: false,
-                    straight: false,
-                    out_mode: 'out',
-                    bounce: false,
-                    attract: {
-                        enable: false,
-                        rotateX: 600,
-                        rotateY: 1200
-                    }
-                }
-            },
-            interactivity: {
-                detect_on: 'canvas',
-                events: {
-                    onhover: {
-                        enable: true,
-                        mode: 'repulse'
-                    },
-                    onclick: {
-                        enable: true,
-                        mode: 'push'
-                    },
-                    resize: true
-                },
-                modes: {
-                    grab: {
-                        distance: 400,
-                        line_linked: {
-                            opacity: 1
-                        }
-                    },
-                    bubble: {
-                        distance: 400,
-                        size: 40,
-                        duration: 2,
-                        opacity: 8,
-                        speed: 3
-                    },
-                    repulse: {
-                        distance: 200,
-                        duration: 0.4
-                    },
-                    push: {
-                        particles_nb: 4
-                    },
-                    remove: {
-                        particles_nb: 2
-                    }
-                }
-            },
-            retina_detect: true
-        });
+    <div class="hero-grid">
+      <div class="hero-cell">
+        <div class="k">STATUS</div>
+        <div class="v stamp">Open to opportunities</div>
+      </div>
+      <div class="hero-cell">
+        <div class="k">FOCUS</div>
+        <div class="v">RAG pipelines, multi-agent workflows, MCP</div>
+      </div>
+    </div>
 
-        // Typed.js initialization
-        var typed = new Typed("#typed-text", {
-            strings: [
-            "$ streamlit run app.py   # hArI v2",
-            "$ research \"topic\"   # Research Pipeline",
-            "$ uv run uvicorn api.main:app --reload   # FinOS",
-            "$ git commit -m \"ship it\""
-        ],
-            typeSpeed: 40,
-            backSpeed: 30,
-            backDelay: 2000,
-            loop: true,
-            showCursor: true,
-            cursorChar: '_'
-        });
+    <div class="recruiter-snapshot reveal" aria-label="Recruiter snapshot">
+      <div class="snapshot-cell"><div class="snapshot-k">ROLE</div><div class="snapshot-v accent">AI Engineer</div></div>
+      <div class="snapshot-cell"><div class="snapshot-k">SPECIALTY</div><div class="snapshot-v">Agents · RAG · Tooling</div></div>
+      <div class="snapshot-cell"><div class="snapshot-k">FLAGSHIP</div><div class="snapshot-v">Waypoint</div></div>
+      <div class="snapshot-cell"><div class="snapshot-k">EXPERIENCE</div><div class="snapshot-v">9 mo. full-stack production</div></div>
+      <div class="snapshot-cell"><div class="snapshot-k">SYSTEMS</div><div class="snapshot-v">7+ shipped / built</div></div>
+      <div class="snapshot-cell"><div class="snapshot-k">BACKEND</div><div class="snapshot-v">Python · FastAPI · SQL</div></div>
+      <div class="snapshot-cell"><div class="snapshot-k">WORK MODEL</div><div class="snapshot-v">Remote-friendly · open to relocate</div></div>
+      <div class="snapshot-cell"><div class="snapshot-k">CONTACT</div><div class="snapshot-v"><a href="mailto:harshbhanu0709@gmail.com">Email me →</a></div></div>
+    </div>
 
-        // Navigation active state
-        const sections = document.querySelectorAll("section");
-        const navLinks = document.querySelectorAll("nav a");
+    <div class="capability-note" style="margin:0 0 22px;color:var(--ink-soft)">STATE → ROUTE → EXECUTE → VALIDATE → OBSERVE</div>
+    <div class="hero-actions">
+      <a href="resume.pdf" class="btn primary"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg> Download resume</a>
+      <a href="#work" class="btn">Explore systems</a>
+      <a href="mailto:harshbhanu0709@gmail.com" class="btn">Get in touch</a>
+    </div>
 
-        window.addEventListener("scroll", () => {
-            let current = "";
-            sections.forEach((section) => {
-                const sectionTop = section.offsetTop - 100;
-                if (pageYOffset >= sectionTop) {
-                    current = section.getAttribute("id");
-                }
-            });
+    <div class="hero-diagram">
+      <svg viewBox="0 0 1120 220" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Architecture diagram: Query flows through Cache Hit or Pattern Router into RAG, then LLM, then Validate, then Respond. About 80 percent of queries require zero LLM calls.">
+        <line x1="20" y1="110" x2="1100" y2="110" stroke="var(--rule)" stroke-width="1"/>
+        <path class="draw-line" id="heroPath" d="M40,110 H150 M150,110 V60 H260 M150,110 V160 H260 M260,60 H400 M260,160 H400 M400,60 V160 M400,110 H540 M540,110 H680 M680,110 H820 M820,110 H900" fill="none" stroke="var(--blue)" stroke-width="1.6"/>
+        <g class="diagram-node" style="animation-delay:1.0s">
+          <rect x="10" y="92" width="60" height="36" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="40" y="115" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink)">QUERY</text>
+        </g>
+        <g class="diagram-node" style="animation-delay:1.3s">
+          <rect x="200" y="42" width="90" height="36" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="245" y="65" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink)">CACHE HIT</text>
+        </g>
+        <g class="diagram-node" style="animation-delay:1.5s">
+          <rect x="200" y="142" width="90" height="36" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="245" y="165" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink)">PATTERN</text>
+        </g>
+        <g class="diagram-node" style="animation-delay:1.8s">
+          <rect x="360" y="92" width="80" height="36" fill="var(--paper)" stroke="var(--stamp)" stroke-width="1.4"/>
+          <text x="400" y="115" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--stamp)">RAG</text>
+        </g>
+        <g class="diagram-node" style="animation-delay:2.0s">
+          <rect x="500" y="92" width="80" height="36" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="540" y="115" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink)">LLM</text>
+        </g>
+        <g class="diagram-node" style="animation-delay:2.2s">
+          <rect x="640" y="92" width="80" height="36" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="680" y="115" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink)">VALIDATE</text>
+        </g>
+        <g class="diagram-node" style="animation-delay:2.4s">
+          <rect x="780" y="92" width="80" height="36" fill="var(--paper)" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="820" y="115" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink)">RESPOND</text>
+        </g>
+        <g class="diagram-node" style="animation-delay:2.6s">
+          <rect x="920" y="92" width="140" height="36" fill="rgba(52,211,153,0.06)" stroke="var(--emerald)" stroke-width="1.4"/>
+          <text x="990" y="115" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--emerald)">~80% ZERO-LLM</text>
+        </g>
+      </svg>
+      <div class="diagram-caption">
+        <span>FIG. 01, QUERY ROUTING, AI AGENT ENGINE</span>
+        <span>SCALE N.T.S.</span>
+      </div>
+    </div>
+  </div>
+</section>
 
-            navLinks.forEach((link) => {
-                link.classList.remove("text-cyan-400");
-                if (link.getAttribute("href") === `#${current}`) {
-                    link.classList.add("text-cyan-400");
-                }
-            });
-        });
+<!-- ABOUT -->
+<section id="about">
+  <div class="wrap">
+    <div class="sheet-label">
+      <span class="no slab">01</span>
+      <h2 class="slab">About</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="about-body reveal">
+      <div class="about-tag">
+        DISCIPLINE<br>SYSTEMS DESIGN<br><br>
+        MATERIAL<br>PYTHON<br><br>
+        METHOD<br>PLAN, THEN BUILD
+      </div>
+      <div class="about-copy">
+        <p>I don't start AI projects by choosing an LLM framework. I start by defining <span class="callout">state, execution boundaries, deterministic paths, failure modes, and evaluation</span>. Then I decide where an LLM actually belongs.</p>
+        <p>I spent 9 months as a full-stack developer at Symbiosis Systems, shipping 3 enterprise apps with ASP.NET and SQL Server. That experience shaped how I think about persistence, APIs, validation, and software that has to survive real usage.</p>
+        <p>Now I apply that discipline to <span class="callout">multi-agent systems, RAG pipelines, tool execution, and cost-aware LLM workflows</span> in Python — using frameworks as implementation tools, not as architecture.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        // Back to top button
-        const backToTopBtn = document.getElementById("backToTop");
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 400) {
-                backToTopBtn.classList.remove("hidden");
-            } else {
-                backToTopBtn.classList.add("hidden");
-            }
-        });
+<!-- WORK -->
+<section id="work">
+  <div class="wrap">
+    <div class="sheet-label">
+      <span class="no slab">02</span>
+      <h2 class="slab">Systems</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="section-intro">A small portfolio of systems built around explicit state, bounded execution, deterministic routing, retrieval, validation, persistence, and human control.</p>
 
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById("mobile-menu-btn");
-        const nav = document.querySelector("nav");
-        
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener("click", () => {
-                nav.classList.toggle("hidden");
-            });
-        }
+    <!-- WAYPOINT -->
+    <div class="datasheet reveal">
+      <div class="ds-head">
+        <h3 class="slab"><span class="cmd">$ open</span>Waypoint</h3>
+        <span class="status">SHEET 01, IN PROGRESS</span>
+      </div>
+      <p class="ds-desc">Multi-agent AI trip planner. You describe a trip through a structured form, a graph of LangGraph agents plans transport, lodging, activities, and budget, the system produces a day-by-day itinerary, and you refine it through a chat-based review loop before finalizing.</p>
+      <div class="metric-strip"><span class="metric"><strong>5</strong> LangGraph agents</span><span class="metric"><strong>7</strong> mechanical tool nodes</span><span class="metric">Postgres checkpointing</span><span class="metric">Human review + replanning</span></div>
+      <div class="system-why"><strong>Engineering signal:</strong> state is explicit and write-safe; external tools are separated from agent reasoning; failures route through critique instead of disappearing inside a retry loop.</div>
+      <div class="build-note">
+        <span class="label">Build note</span><br>
+        <strong>Why this architecture:</strong> Each tool node (flights, trains, hotels, activities) writes to a separate TypedDict key so parallel fan-out via LangGraph's Send API is write-safe. No merge conflicts. The Postgres checkpointer survives browser refresh and server restart. The human-review gate was added after early versions produced itineraries with impossible connections, like a red-eye flight followed by a 6am hotel check-in.
+      </div>
+      <div class="ds-diagram">
+        <svg viewBox="0 0 1040 150" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Waypoint agent flow: Concierge feeds Planner, which fans out to Flights, Trains, Hotels, and Activities tool nodes. These merge into Budget, then Itinerary, then a Human Review gate. Approved plans go to Finalize. Rejected plans loop back through Critic to Planner.">
+          <rect x="10" y="56" width="100" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="60" y="79" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink)">CONCIERGE</text>
+          <line x1="110" y1="75" x2="160" y2="75" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="160" y="56" width="80" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="200" y="79" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink)">PLANNER</text>
+          <line x1="240" y1="75" x2="290" y2="75" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="290" y="10" width="70" height="30" fill="none" stroke="var(--ink-soft)" stroke-width="1.2"/>
+          <text x="325" y="29" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="var(--ink-soft)">FLIGHTS</text>
+          <rect x="290" y="44" width="70" height="30" fill="none" stroke="var(--ink-soft)" stroke-width="1.2"/>
+          <text x="325" y="63" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="var(--ink-soft)">TRAINS</text>
+          <rect x="290" y="78" width="70" height="30" fill="none" stroke="var(--ink-soft)" stroke-width="1.2"/>
+          <text x="325" y="97" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="var(--ink-soft)">HOTELS</text>
+          <rect x="290" y="112" width="70" height="30" fill="none" stroke="var(--ink-soft)" stroke-width="1.2"/>
+          <text x="325" y="131" text-anchor="middle" font-family="IBM Plex Mono" font-size="7.5" fill="var(--ink-soft)">ACTIVITIES</text>
+          <line x1="360" y1="25" x2="420" y2="75" stroke="var(--blue)" stroke-width="1.2"/>
+          <line x1="360" y1="59" x2="420" y2="75" stroke="var(--blue)" stroke-width="1.2"/>
+          <line x1="360" y1="93" x2="420" y2="75" stroke="var(--blue)" stroke-width="1.2"/>
+          <line x1="360" y1="127" x2="420" y2="75" stroke="var(--blue)" stroke-width="1.2"/>
+          <rect x="420" y="56" width="70" height="38" fill="none" stroke="var(--stamp)" stroke-width="1.4"/>
+          <text x="455" y="79" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--stamp)">BUDGET</text>
+          <line x1="490" y1="75" x2="540" y2="75" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="540" y="56" width="80" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="580" y="79" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--ink)">ITINERARY</text>
+          <line x1="620" y1="75" x2="670" y2="75" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="670" y="48" width="90" height="54" fill="none" stroke="var(--blue)" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <text x="715" y="72" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--blue)">HUMAN</text>
+          <text x="715" y="86" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--blue)">REVIEW</text>
+          <line x1="760" y1="68" x2="810" y2="65" stroke="var(--emerald)" stroke-width="1.3"/>
+          <rect x="810" y="46" width="80" height="38" fill="rgba(52,211,153,0.06)" stroke="var(--emerald)" stroke-width="1.4"/>
+          <text x="850" y="69" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="var(--emerald)">FINALIZE</text>
+          <line x1="760" y1="82" x2="810" y2="95" stroke="var(--stamp)" stroke-width="1.3"/>
+          <rect x="810" y="88" width="80" height="38" fill="none" stroke="var(--stamp)" stroke-width="1.4"/>
+          <text x="850" y="111" text-anchor="middle" font-family="IBM Plex Mono" font-size="8" fill="var(--stamp)">CRITIC</text>
+          <path class="draw-line" d="M850,107 L850,130 L200,130 L200,94" fill="none" stroke="var(--stamp)" stroke-width="1" stroke-dasharray="3 2" opacity="0.4"/>
+        </svg>
+      </div>
+      <table class="ledger">
+        <tr><th>Spec</th><th>Detail</th></tr>
+        <tr><td>Agents</td><td>Concierge to Planner to Budget to Itinerary to Critic. 5 LangGraph agents with human-in-the-loop review</td></tr>
+        <tr><td>Tools</td><td>7 mechanical tool nodes: flights, trains, buses, cars, hotels, activities, weather. Staged dummy to free API to MCP</td></tr>
+        <tr><td>State</td><td>TypedDict TripState, separate keys per tool result for write-safe parallel fan-out. Postgres checkpointer survives refresh and restart</td></tr>
+        <tr><td>Stack</td><td>Python, LangGraph, FastAPI, Postgres, SQLAlchemy, Pydantic, Groq, Tavily</td></tr>
+        <tr><td class="repo" colspan="2"><a href="https://github.com/harshbhanushali26/waypoint" target="_blank" rel="noopener">github.com/harshbhanushali26/waypoint</a></td></tr>
+      </table>
+      <div class="ds-actions"><a href="https://github.com/harshbhanushali26/waypoint" target="_blank" rel="noopener">GitHub →</a><a href="#contact">Discuss the architecture →</a></div>
+    </div>
 
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({
-                        behavior: 'smooth',
-                        block: 'start'
-                    });
-                }
-            });
-        });
+    <div class="sheet-label">
+      <span class="no slab">03</span>
+      <h2 class="slab">Featured systems</h2>
+      <span class="rule"></span>
+    </div>
 
-        // Add some interactive effects
-        document.addEventListener('DOMContentLoaded', function() {
-            // Intersection Observer for animations
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
+    <!-- hArI -->
+    <div class="datasheet reveal">
+      <div class="ds-head">
+        <h3 class="slab"><span class="cmd">$ open</span>hArI<a href="https://harichat.streamlit.app" target="_blank" rel="noopener" class="live-badge"><span class="live-dot"></span>LIVE</a></h3>
+        <span class="status">SHEET 02, DEPLOYED</span>
+      </div>
+      <p class="ds-desc">RAG document intelligence. Upload PDFs or CSVs, ask questions, get cited answers. Rebuilt from a single-store ChromaDB prototype into a hybrid-search, multi-user system.</p>
+      <div class="metric-strip"><span class="metric"><strong>hybrid</strong> vector + full-text</span><span class="metric"><strong>multi-user</strong> scoped retrieval</span><span class="metric">cited answers</span><span class="metric">DuckDB SQL isolation</span></div>
+      <div class="system-why"><strong>Engineering signal:</strong> the architecture changed in response to real failure modes ,  shared retrieval scope, exact-match misses, and unsafe CSV execution.</div>
+      <div class="sleep-note">Live demo sleeps after 12 hours of inactivity (Streamlit Cloud). First load may take 30 to 60 seconds to wake up.</div>
+      <div class="build-note" style="margin-top:16px">
+        <span class="label">Build note</span><br>
+        <strong>Why the migration:</strong> The ChromaDB prototype struggled with multi-user document isolation. Every user queried the same collection. I migrated to Supabase + pgvector for per-user scoping via Row Level Security. The hybrid retrieval (vector + full-text) was added after pure semantic search kept missing exact keyword matches in legal and financial documents. DuckDB replaced <code>pandas.exec()</code> after I realized untrusted CSV queries could execute arbitrary Python.
+      </div>
+      <div class="ds-diagram">
+        <svg viewBox="0 0 1040 190" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="hArI data flow: User Query branches into pgvector Similarity and tsvector Full-Text search. These merge at an RPC Merge node, flow through DuckDB Engine, and produce a Cited Answer.">
+          <rect x="20" y="76" width="120" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="80" y="99" text-anchor="middle" font-family="IBM Plex Mono" font-size="10" fill="var(--ink)">USER QUERY</text>
+          <line x1="140" y1="95" x2="220" y2="40" stroke="var(--blue)" stroke-width="1.3"/>
+          <line x1="140" y1="95" x2="220" y2="150" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="220" y="20" width="180" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="310" y="44" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink)">PGVECTOR SIMILARITY</text>
+          <rect x="220" y="130" width="180" height="40" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="310" y="154" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink)">TSVECTOR FULL-TEXT</text>
+          <line x1="400" y1="40" x2="470" y2="90" stroke="var(--blue)" stroke-width="1.3"/>
+          <line x1="400" y1="150" x2="470" y2="100" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="470" y="76" width="120" height="38" fill="none" stroke="var(--stamp)" stroke-width="1.4"/>
+          <text x="530" y="99" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--stamp)">RPC MERGE</text>
+          <line x1="590" y1="95" x2="660" y2="95" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="660" y="76" width="140" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="730" y="99" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink)">DUCKDB ENGINE</text>
+          <line x1="800" y1="95" x2="870" y2="95" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="870" y="76" width="150" height="38" fill="rgba(52,211,153,0.06)" stroke="var(--emerald)" stroke-width="1.4"/>
+          <text x="945" y="99" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--emerald)">CITED ANSWER</text>
+        </svg>
+      </div>
+      <table class="ledger">
+        <tr><th>Spec</th><th>Detail</th></tr>
+        <tr><td>Retrieval</td><td>Hybrid: pgvector similarity + tsvector full-text via a custom Supabase RPC</td></tr>
+        <tr><td>CSV queries</td><td>DuckDB SQL engine replacing <code>pandas.exec()</code> for safe multi-CSV queries</td></tr>
+        <tr><td>Users</td><td>Supabase Auth, per-user chat persistence, citation UI with telemetry feedback</td></tr>
+        <tr><td>Live demo</td><td><a href="https://harichat.streamlit.app" target="_blank" rel="noopener" style="color:var(--emerald);text-decoration:none">harichat.streamlit.app</a> (sleeps after 12h inactivity)</td></tr>
+        <tr><td>Stack</td><td>Python, Streamlit, Supabase, pgvector, DuckDB, Groq, LangChain, SentenceTransformer</td></tr>
+        <tr><td class="repo" colspan="2"><a href="https://github.com/harshbhanushali26/hArI" target="_blank" rel="noopener">github.com/harshbhanushali26/hArI</a></td></tr>
+      </table>
+      <div class="ds-actions"><a href="https://harichat.streamlit.app" target="_blank" rel="noopener">Live demo →</a><a href="https://github.com/harshbhanushali26/hArI" target="_blank" rel="noopener">GitHub →</a></div>
+    </div>
 
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.opacity = '1';
-                        entry.target.style.transform = 'translateY(0)';
-                    }
-                });
-            }, observerOptions);
+    <!-- AI AGENT ENGINE -->
+    <div class="datasheet reveal">
+      <div class="ds-head">
+        <h3 class="slab"><span class="cmd">$ open</span>AI Agent Engine</h3>
+        <span class="status">SHEET 03, SHIPPED</span>
+      </div>
+      <p class="ds-desc">Autonomous agent engine. A 4-layer pipeline routes ~80% of queries with 0 LLM calls and keeps measured per-session cost around ~$0.0005.
+      <div class="metric-strip"><span class="metric"><strong>~80%</strong> zero-LLM routes</span><span class="metric"><strong>~$0.0005</strong> / session</span><span class="metric"><strong>~30ms</strong> retrieval benchmark</span><span class="metric">Replanning on failure</span></div> Five sequential agents handle planning, validation, execution, replanning on failure, and response.</p>
+      <div class="system-why"><strong>Engineering signal:</strong> deterministic routing is treated as a first-class execution path, with LLM calls reserved for cases that actually need inference.</div>
+      <div class="build-note">
+        <span class="label">Build note</span><br>
+        <strong>Why this design:</strong> I built this after watching API costs scale linearly on a previous project. The cache layer came first. The pattern router came after I noticed about 40% of remaining queries were deterministic (greetings, status checks, timezone conversions). The daily quota enforcement was a hard lesson. A runaway overnight job burned through an entire API quota before morning. The Replanner agent was added when the Executor started failing silently on edge cases instead of retrying with a different approach.
+      </div>
+      <div class="ds-diagram">
+        <svg viewBox="0 0 1040 130" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="AI Agent Engine pipeline: Planner flows to Validator, then Executor, then Replanner (on failure) or Responder. A dashed sidebar shows ChromaDB plus SentenceTransformer with approximately 30 milliseconds latency.">
+          <rect x="10" y="46" width="110" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="65" y="69" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink)">PLANNER</text>
+          <line x1="120" y1="65" x2="170" y2="65" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="170" y="46" width="115" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="227" y="69" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink)">VALIDATOR</text>
+          <line x1="285" y1="65" x2="335" y2="65" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="335" y="46" width="110" height="38" fill="none" stroke="var(--stamp)" stroke-width="1.4"/>
+          <text x="390" y="69" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--stamp)">EXECUTOR</text>
+          <line x1="445" y1="65" x2="495" y2="65" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="495" y="46" width="115" height="38" fill="none" stroke="var(--amber)" stroke-width="1.4" stroke-dasharray="3 2"/>
+          <text x="552" y="69" text-anchor="middle" font-family="IBM Plex Mono" font-size="8.5" fill="var(--amber)">REPLANNER</text>
+          <line x1="610" y1="65" x2="660" y2="65" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="660" y="46" width="115" height="38" fill="none" stroke="var(--ink-soft)" stroke-width="1.4"/>
+          <text x="717" y="69" text-anchor="middle" font-family="IBM Plex Mono" font-size="9" fill="var(--ink)">RESPONDER</text>
+          <line x1="775" y1="65" x2="815" y2="65" stroke="var(--blue)" stroke-width="1.3"/>
+          <rect x="815" y="30" width="205" height="70" fill="none" stroke="var(--ink-soft)" stroke-width="1.4" stroke-dasharray="4 3"/>
+          <text x="917" y="60" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink-soft)">CHROMADB + SENTENCE-</text>
+          <text x="917" y="76" text-anchor="middle" font-family="IBM Plex Mono" font-size="9.5" fill="var(--ink-soft)">TRANSFORMER, ~30ms</text>
+        </svg>
+      </div>
+      <table class="ledger">
+        <tr><th>Spec</th><th>Detail</th></tr>
+        <tr><td>Retrieval layer</td><td>ChromaDB + SentenceTransformer RAG, ~30ms latency (measured on 200-query benchmark set)</td></tr>
+        <tr><td>Cost control</td><td>Token tracking and daily quota enforcement</td></tr>
+        <tr><td>Pipeline</td><td>Planner to Validator to Executor to Replanner (on failure) to Responder. Auto-retry with replanning</td></tr>
+        <tr><td>Traceability</td><td>Every decision logged at session level for full audit trail</td></tr>
+        <tr><td>Stack</td><td>Python, LangChain, ChromaDB, Gemini, FastAPI, Pydantic</td></tr>
+        <tr><td class="repo" colspan="2"><a href="https://github.com/harshbhanushali26/ai-agent-engine" target="_blank" rel="noopener">github.com/harshbhanushali26/ai-agent-engine</a></td></tr>
+      </table>
+    </div>
 
-            // Observe all sections
-            document.querySelectorAll('section').forEach(section => {
-                section.style.opacity = '0';
-                section.style.transform = 'translateY(20px)';
-                section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-                observer.observe(section);
-            });
-        });
-    </script>
+    <!-- FinOS -->
+    <div class="datasheet reveal">
+      <div class="ds-head">
+        <h3 class="slab"><span class="cmd">$ open</span>FinOS</h3>
+        <span class="status">SHEET 04, SHIPPED</span>
+      </div>
+      <p class="ds-desc">Full-stack AI finance platform. A dashboard for passive logging plus a conversational agent for active querying, both writing to the same SQLite store. Third generation of the system.</p>
+      <div class="build-note">
+        <span class="label">Build note</span><br>
+        <strong>Why three generations:</strong> The first version stored everything in JSON files and had no query layer. The second added SQLite but every query hit the LLM, which was slow and expensive. This version introduces pattern matching for ~60% of queries (balance checks, category sums, monthly averages) so they resolve with 0 LLM calls. Complex queries stream via Groq with Server-Sent Events. The financial health score was the hardest part. It took four iterations to weight the factors in a way that matched how people actually think about their money.
+      </div>
+      <table class="ledger">
+        <tr><th>Spec</th><th>Detail</th></tr>
+        <tr><td>Query routing</td><td>~60% of queries answered by pattern matching, 0 LLM calls. Complex queries stream via Groq + SSE</td></tr>
+        <tr><td>Features</td><td>Financial health scoring, spending forecasts, budget threshold alerts</td></tr>
+        <tr><td>Auth</td><td>bcrypt-hardened auth with session tokens and CLI-based recovery</td></tr>
+        <tr><td>Stack</td><td>Python, FastAPI, SQLModel, Groq, SSE</td></tr>
+        <tr><td class="repo" colspan="2"><a href="https://github.com/harshbhanushali26/finos" target="_blank" rel="noopener">github.com/harshbhanushali26/finos</a></td></tr>
+      </table>
+    </div>
+
+    <!-- RESEARCH PIPELINE -->
+    <div class="datasheet reveal">
+      <div class="ds-head">
+        <h3 class="slab"><span class="cmd">$ open</span>Research Pipeline</h3>
+        <span class="status">SHEET 05, SHIPPED</span>
+      </div>
+      <p class="ds-desc">6-agent supervisor-driven CLI pipeline. Search, scrape, summarize, critique, synthesize. Complexity-based model routing with Groq and Gemini fallback. Covers 30 to 50 sources across 5 to 9 targeted questions per run.</p>
+      <table class="ledger">
+        <tr><th>Spec</th><th>Detail</th></tr>
+        <tr><td>Agents</td><td>Supervisor to Search to Scraper to Summarizer to Critic to Synthesizer</td></tr>
+        <tr><td>Model routing</td><td>Groq (llama-3.3-70b) primary, Gemini (gemini-2.0-flash) fallback</td></tr>
+        <tr><td>Search</td><td>DuckDuckGo search plus web scraping per query. Auto-detects research gaps mid-run and re-searches</td></tr>
+        <tr><td>Stack</td><td>Python, Groq API, Gemini API, DuckDuckGo API</td></tr>
+        <tr><td class="repo" colspan="2"><a href="https://github.com/harshbhanushali26/research-pipeline" target="_blank" rel="noopener">github.com/harshbhanushali26/research-pipeline</a></td></tr>
+      </table>
+    </div>
+
+    <!-- NEXTSTEPS -->
+    <div class="datasheet reveal">
+      <div class="ds-head">
+        <h3 class="slab"><span class="cmd">$ open</span>NextSteps</h3>
+        <span class="status">SHEET 06, SHIPPED</span>
+      </div>
+      <p class="ds-desc">Automated resume-to-JD gap analyzer. Full skill mapping and personalized roadmap in under 5 to 8 minutes. Clean parse, analyze, output pipeline.</p>
+      <table class="ledger">
+        <tr><th>Spec</th><th>Detail</th></tr>
+        <tr><td>Parsing</td><td>Extracts unstructured resume data, evaluates against a raw JD or a job-post URL</td></tr>
+        <tr><td>Mapping</td><td>Correlates identified skill gaps to step-by-step learning modules</td></tr>
+        <tr><td>Pipeline</td><td>Parse to analyze to output. No hardcoded resume or JD assumptions, works on any format</td></tr>
+        <tr><td>Stack</td><td>Python, FastAPI, Groq API, Gemini, Tavily, Pydantic, REST API</td></tr>
+        <tr><td class="repo" colspan="2"><a href="https://github.com/harshbhanushali26/NextSteps" target="_blank" rel="noopener">github.com/harshbhanushali26/NextSteps</a></td></tr>
+      </table>
+    </div>
+
+    <div class="sheet-label">
+      <span class="no slab">04</span>
+      <h2 class="slab">Supporting systems</h2>
+      <span class="rule"></span>
+    </div>
+    <table class="other-table reveal">
+      <thead>
+        <tr><th>Sheet</th><th>Function</th><th>Stack</th></tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="name"><a href="https://github.com/harshbhanushali26/mcp-implementations" target="_blank" rel="noopener">DevMind, MCP Server</a></td>
+          <td class="desc">Local MCP server with 6 tools. File read/write, Python execution, JSON utilities. HITL confirmation on all write and run actions. Fixed a subprocess stdin isolation bug that silently hangs most naive MCP implementations.</td>
+          <td class="stack">Python, MCP SDK, tiktoken</td>
+        </tr>
+        <tr>
+          <td class="name"><a href="https://github.com/harshbhanushali26/langgraph-parallel-sql" target="_blank" rel="noopener">LangGraph Parallel SQL Runner</a></td>
+          <td class="desc">Multi-question parallel SQL execution via LangGraph's Send API, with an inline human review gate before any query fires.</td>
+          <td class="stack">LangGraph, Groq, SQLite</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="wrap">
+    <div class="sheet-label">
+      <span class="no slab">05</span>
+      <h2 class="slab">Capabilities & stack</h2>
+      <span class="rule"></span>
+    </div>
+    <p class="capability-note">Tools and frameworks are grouped by the engineering capability they support — orchestration, retrieval, backend systems, reliability, and interfaces.</p>
+    <div class="parts-grid reveal">
+      <div class="parts-group">
+        <h4>Orchestration & reasoning</h4>
+        <ul class="parts-list">
+          <li><span>RAG, LLM orchestration, tool-calling</span><span class="role">core</span></li>
+          <li><span>Groq API</span><span class="role">LLM layer</span></li>
+          <li><span>Gemini API</span><span class="role">LLM layer</span></li>
+          <li><span>LangGraph</span><span class="role">agent graphs</span></li>
+          <li><span>MCP</span><span class="role">tool servers</span></li>
+          <li><span>Cost-aware AI design</span><span class="role">specialty</span></li>
+        </ul>
+      </div>
+      <div class="parts-group">
+        <h4>Retrieval & data</h4>
+        <ul class="parts-list">
+          <li><span>Supabase</span><span class="role">pgvector / auth</span></li>
+          <li><span>DuckDB</span><span class="role">in-memory SQL</span></li>
+          <li><span>ChromaDB</span><span class="role">embedding store</span></li>
+          <li><span>SentenceTransformer</span><span class="role">embeddings</span></li>
+          <li><span>SQLite</span><span class="role">local persistence</span></li>
+        </ul>
+      </div>
+      <div class="parts-group">
+        <h4>Backend & APIs</h4>
+        <ul class="parts-list">
+          <li><span>Python</span><span class="role">intermediate+</span></li>
+          <li><span>SQL</span><span class="role">proficient</span></li>
+          <li><span>JavaScript</span><span class="role">familiar</span></li>
+          <li><span>FastAPI</span><span class="role">backend APIs</span></li>
+          <li><span>ASP.NET (C#)</span><span class="role">enterprise</span></li>
+        </ul>
+      </div>
+      <div class="parts-group">
+        <h4>Delivery & interfaces</h4>
+        <ul class="parts-list">
+          <li><span>Streamlit</span><span class="role">AI UIs</span></li>
+          <li><span>Rich CLI</span><span class="role">terminal UX</span></li>
+          <li><span>Git / GitHub</span><span class="role">version control</span></li>
+          <li><span>uv</span><span class="role">packaging</span></li>
+          <li><span>Docker</span><span class="role">learning</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="wrap">
+    <div class="sheet-label">
+      <span class="no slab">06</span>
+      <h2 class="slab">Contact</h2>
+      <span class="rule"></span>
+    </div>
+    <div class="contact-wrap reveal">
+      <div>
+        <div class="stamp-box">OPEN FOR OPPORTUNITIES</div>
+        <p class="contact-copy">AI engineer with 9 months of full-stack production experience and a portfolio of agentic, RAG, and tool-execution systems. Open to AI Engineer and Python Developer roles, especially at teams building real AI products.</p>
+        <table class="looking-table">
+          <tr><td>LOOKING FOR</td><td>AI Engineer, Python Developer</td></tr>
+          <tr><td>AVAILABILITY</td><td>Open to AI Engineer roles at AI-first startups — Mumbai, Pune, Bangalore, Hyderabad, or remote.</td></tr>
+        </table>
+      </div>
+      <ul class="directory">
+        <li><span class="k">EMAIL</span><a href="mailto:harshbhanu0709@gmail.com">harshbhanu0709@gmail.com</a>
+        </li>
+        <li><span class="k">LINKEDIN</span><a href="https://www.linkedin.com/in/harshbhanushali0709" target="_blank" rel="noopener">in/harshbhanushali0709</a></li>
+        <li><span class="k">GITHUB</span><a href="https://github.com/harshbhanushali26" target="_blank" rel="noopener">github.com/harshbhanushali26</a></li>
+        <li><span class="k">RESUME</span><a href="resume.pdf">download PDF</a></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <span>&copy; <span id="year"></span> Harsh Bhanushali</span>
+  </div>
+</footer>
+
+<button class="back-top" id="backTop" aria-label="Back to top">&#8593;</button>
+
+<script>
+// Theme toggle
+var themeToggle = document.getElementById('themeToggle');
+var savedTheme = null;
+try { savedTheme = localStorage.getItem('theme'); } catch(e) {}
+if (savedTheme === 'light') document.documentElement.classList.add('light');
+if (themeToggle) {
+  themeToggle.addEventListener('click', function(){
+    document.documentElement.classList.toggle('light');
+    var isLight = document.documentElement.classList.contains('light');
+    try { localStorage.setItem('theme', isLight ? 'light' : 'dark'); } catch(e) {}
+  });
+}
+
+// Year
+var yearEl = document.getElementById('year');
+if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+// Mobile menu
+var toggle = document.getElementById('tbToggle');
+var nav = document.getElementById('tbNav');
+if (toggle && nav) {
+  toggle.addEventListener('click', function(){
+    var open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  nav.querySelectorAll('a').forEach(function(a){
+    a.addEventListener('click', function(){ nav.classList.remove('open'); toggle.setAttribute('aria-expanded','false'); });
+  });
+}
+
+// Navbar scroll
+var titlebar = document.getElementById('titlebar');
+window.addEventListener('scroll', function(){
+  titlebar.classList.toggle('scrolled', window.scrollY > 50);
+});
+
+// Back to top
+var backTop = document.getElementById('backTop');
+window.addEventListener('scroll', function(){ backTop.classList.toggle('show', window.scrollY > 400); });
+backTop.addEventListener('click', function(){ window.scrollTo({top:0,behavior:'smooth'}); });
+
+// Scroll reveal
+var observer = new IntersectionObserver(function(entries){
+  entries.forEach(function(entry){
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      entry.target.querySelectorAll('.draw-line').forEach(function(el){ el.classList.add('animate'); });
+      entry.target.querySelectorAll('.diagram-node').forEach(function(el){ el.classList.add('animate'); });
+    }
+  });
+}, { threshold: 0.15 });
+document.querySelectorAll('section').forEach(function(el){ observer.observe(el); });
+document.querySelectorAll('.reveal').forEach(function(el){ observer.observe(el); });
+
+// Active nav link highlight
+var navLinks = document.querySelectorAll('.tb-nav a');
+var navSections = ['top','about','work','skills','contact'];
+
+function updateActiveNav(){
+  var current = 'top';
+  var marker = window.scrollY + 120;
+
+  navSections.forEach(function(id){
+    var section = document.getElementById(id);
+    if (section && section.offsetTop <= marker) current = id;
+  });
+
+  navLinks.forEach(function(a){
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+}
+
+window.addEventListener('scroll', updateActiveNav, {passive:true});
+window.addEventListener('resize', updateActiveNav);
+updateActiveNav();
+
+// Trigger hero diagram on load
+window.addEventListener('load', function(){
+  setTimeout(function(){
+    var heroSection = document.querySelector('.hero');
+    if (heroSection) {
+      heroSection.querySelectorAll('.draw-line').forEach(function(el){ el.classList.add('animate'); });
+      heroSection.querySelectorAll('.diagram-node').forEach(function(el){ el.classList.add('animate'); });
+    }
+  }, 200);
+
+  // Typing animation
+  // Strict sequence:
+  // 1. Show line 1 and type its message.
+  // 2. When line 1 finishes, reveal line 2 and type it.
+  // 3. Repeat for lines 3 and 4.
+  var typeData = [
+    {
+      line: document.getElementById('line1'),
+      el: document.getElementById('typed1'),
+      cursor: document.getElementById('cursor1'),
+      text: '~80% of queries routed with 0 LLM calls',
+      delay: 28
+    },
+    //{
+    //  line: document.getElementById('line2'),
+    //  el: document.getElementById('typed2'),
+    //  cursor: document.getElementById('cursor2'),
+    //  text: '~$0.0005 measured cost per session',
+    //  delay: 30
+    //},
+    {
+      line: document.getElementById('line3'),
+      el: document.getElementById('typed3'),
+      cursor: document.getElementById('cursor3'),
+      text: 'hybrid retrieval, pgvector + tsvector via RPC',
+      delay: 27
+    },
+    {
+      line: document.getElementById('line4'),
+      el: document.getElementById('typed4'),
+      cursor: document.getElementById('cursor4'),
+      text: '5 agents, 7 tool nodes, human review',
+      delay: 29
+    }
+  ];
+
+  function typeTerminalLine(index){
+    if (index >= typeData.length) return;
+
+    var d = typeData[index];
+    if (!d.line || !d.el || !d.cursor) return;
+
+    // Keep every future line completely hidden until it is its turn.
+    d.line.classList.remove('hidden');
+    d.line.style.display = 'flex';
+    d.el.textContent = '';
+    d.cursor.classList.remove('done');
+
+    var charIndex = 0;
+
+    function typeNextCharacter(){
+      if (charIndex < d.text.length) {
+        d.el.textContent += d.text.charAt(charIndex);
+        charIndex++;
+        setTimeout(typeNextCharacter, d.delay);
+        return;
+      }
+
+      // Line is fully typed. Leave it visible, then start the next line.
+      d.cursor.classList.add('done');
+
+      if (index + 1 < typeData.length) {
+        setTimeout(function(){
+          typeTerminalLine(index + 1);
+        }, 650);
+      }
+    }
+
+    typeNextCharacter();
+  }
+
+  var reducedMotion = window.matchMedia &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (reducedMotion) {
+    typeData.forEach(function(d){
+      if (d.line) {
+        d.line.classList.remove('hidden');
+        d.line.style.display = 'flex';
+      }
+      if (d.el) d.el.textContent = d.text;
+      if (d.cursor) d.cursor.classList.add('done');
+    });
+  } else {
+    // Explicitly hide lines 2+ before starting, regardless of browser/CSS state.
+    typeData.forEach(function(d, index){
+      if (!d.line) return;
+      if (index === 0) {
+        d.line.classList.remove('hidden');
+        d.line.style.display = 'flex';
+      } else {
+        d.line.classList.add('hidden');
+        d.line.style.removeProperty('display');
+      }
+      if (d.el) d.el.textContent = '';
+    });
+
+    setTimeout(function(){
+      typeTerminalLine(0);
+    }, 450);
+  }
+
+  // Particles
+  var pBg = document.getElementById('particlesBg');
+  var colors = ['#4493ff','#00e0ff','#3ddb8a','#9d6cf7'];
+  var particleCount = window.matchMedia('(max-width:700px)').matches ? 12 : 40;
+  if (pBg) for (var i = 0; i < particleCount; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    var size = Math.random() * 3 + 1;
+    p.style.width = size + 'px';
+    p.style.height = size + 'px';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.background = colors[Math.floor(Math.random() * colors.length)];
+    p.style.animationDuration = (Math.random() * 20 + 25) + 's';
+    p.style.animationDelay = (Math.random() * 30) + 's';
+    p.style.opacity = (Math.random() * 0.2 + 0.05).toFixed(2);
+    pBg.appendChild(p);
+  }
+});
+</script>
 </body>
 </html>
